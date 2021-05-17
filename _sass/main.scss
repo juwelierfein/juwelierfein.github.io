@@ -603,7 +603,7 @@ a.toggle-nav {
   .service {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .service h3 {
@@ -708,6 +708,10 @@ a.toggle-nav {
 footer {
   background-color: #3F3A3E;
   padding: 4px 0;
+  color: white;
+}
+
+footer a {
   color: white;
 }
 
