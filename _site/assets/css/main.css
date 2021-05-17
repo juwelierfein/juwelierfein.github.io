@@ -20,7 +20,7 @@ p { color: #606e7c; line-height: 26px; font-size: 18px; margin: 24px 0; }
 
 img { max-width: 100%; }
 
-button { font-family: Baskerville; letter-spacing: 0.03rem; padding: 16px 36px; border: none; margin-top: 12px; background-color: #E5D7BE; color: #846734; text-transform: uppercase; font-size: 12px; }
+button { font-family: Baskerville; letter-spacing: 0.03rem; padding: 16px 36px; border: none; margin-top: 12px; background-color: #E5D7BE; color: #846734; text-transform: uppercase; font-size: 12px; cursor: pointer; }
 
 .wrapper { width: 1100px; max-width: 90%; margin: 3rem auto; }
 
