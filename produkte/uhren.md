@@ -9,7 +9,6 @@ permalink: /produkte/uhren
 
 Wenn Sie eine Vorliebe für hochwertige Uhren haben, vor allem in der Gegend um Bingen und des Rheins entland, dann sind sie bei unserem Juwelier in Bingen richtig.
 
-
 Hier bei Juwelier Fein sind wir stolz auf unsere Auswahl an Luxusuhren. 
 
 Von Tag-Heuer, Movado, Cartier bis hin zu Rolex, um nur ein paar zu nennen. Unsere Uhren werden von unseren zertifizierten Schweizer Uhrmachern sorgfältig und komplett überholt, innen und außen, bis zu einem 99% neuwertigen Zustand.
