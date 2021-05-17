@@ -17,10 +17,10 @@ const heroChange = document.querySelector('#hero');
 let idx = 0;
 let interval = setInterval(run, 2000)
 bgImages = [
-  "/assets/bg/bg1.jpg",
-  "/assets/bg/bg2.jpg",
-  "/assets/bg/bg3.jpg",
-  "/assets/bg/bg4.jpg",
+  "/assets/img/bg1.jpg",
+  "/assets/img/bg2.jpg",
+  "/assets/img/bg3.jpg",
+  "/assets/img/bg4.jpg",
 ]
 
 
