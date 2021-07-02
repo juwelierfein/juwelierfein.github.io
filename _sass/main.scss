@@ -148,9 +148,10 @@ button {
   }
 
   #text .wrapper {
-    width: 50%;
-    margin: 3rem 0;
+    width: 750px;
+    margin: 3rem auto;
   }
+
 
 }
 
@@ -163,7 +164,7 @@ button {
 
   h1 {
     font-size: 72px;
-    line-height: 76px;
+    line-height: 87px;
   }
 
   h2 {
@@ -452,6 +453,8 @@ a.toggle-nav {
 
 
 
+
+
 @media only screen and (min-width: 600px) {
 
 #hero_content {
@@ -463,6 +466,15 @@ a.toggle-nav {
 #hero { 
   height: 950px;
 }
+
+#hero.blank {
+  height: 570px;
+}
+
+#hero_content.blank {
+  width: 100%;
+}
+
 
 
 #hero_outer {

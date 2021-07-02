@@ -30,9 +30,9 @@ button { font-family: Baskerville; letter-spacing: 0.03rem; padding: 16px 36px; 
 
 #text .wrapper p { margin-top: 0; }
 
-@media only screen and (min-width: 600px) { #text { width: 1100px; max-width: 90%; margin: 0 auto; } #text .wrapper { width: 50%; margin: 3rem 0; } }
+@media only screen and (min-width: 600px) { #text { width: 1100px; max-width: 90%; margin: 0 auto; } #text .wrapper { width: 750px; margin: 3rem auto; } }
 
-@media only screen and (min-width: 600px) { h1 { font-size: 72px; line-height: 76px; } h2 { font-size: 48px; line-height: 76px; } h3 { font-size: 30px; line-height: 42px; } p { line-height: 30px; font-size: 20px; margin: 24px 0; } }
+@media only screen and (min-width: 600px) { h1 { font-size: 72px; line-height: 87px; } h2 { font-size: 48px; line-height: 76px; } h3 { font-size: 30px; line-height: 42px; } p { line-height: 30px; font-size: 20px; margin: 24px 0; } }
 
 a.toggle-nav { position: absolute; top: 0px; right: 48px; }
 
@@ -84,7 +84,7 @@ a.toggle-nav { position: absolute; top: 0px; right: 48px; }
 
 #hero_content span { position: relative; font-family: Baskerville; color: #606e7c; }
 
-@media only screen and (min-width: 600px) { #hero_content { width: 60%; border-left: 1px solid #d8c29d; padding-left: 32px; } #hero { height: 950px; } #hero_outer { display: flex; align-items: center; gap: 65px; flex-direction: row-reverse; width: 1500px; max-width: 90%; margin: 0 auto; } }
+@media only screen and (min-width: 600px) { #hero_content { width: 60%; border-left: 1px solid #d8c29d; padding-left: 32px; } #hero { height: 950px; } #hero.blank { height: 570px; } #hero_content.blank { width: 100%; } #hero_outer { display: flex; align-items: center; gap: 65px; flex-direction: row-reverse; width: 1500px; max-width: 90%; margin: 0 auto; } }
 
 #images img { height: 200px; object-fit: cover; width: 100%; }
 

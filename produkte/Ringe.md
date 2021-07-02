@@ -1,8 +1,14 @@
 ---
 layout: blank
-title: Ringe
-description: produkte
+title: Trauringe in Bingen kaufen - Juwelier Bingen
+description: Trauringe in Bingen am Rhein kaufen.
 permalink: /produkte/ringe
 ---
 
-Ringe kaufen
+Es gibt nichts Wertbeständigeres auf der Welt als die Liebe. Wenn sich ein Paar dazu entscheidet, diese Liebe durch das Ja-Wort zu besiegeln, gehört das Symbol der Liebe dazu. Trauringe sollten dabei sorgfältig ausgewählt werden. Dafür stehen wir Ihnen beratend zur Seite. Von der Legierung über das Design hin zu Sonderwünschen, konfigurieren wir Ihnen gerne Ihren individuellen Trau(m)ring. 
+
+
+Dafür nehmen wir uns so viel Zeit, wie Sie benötigen, denn Ihre Zufriedenheit liegt uns am Herzen. Buchen Sie sich gerne einen Termin in unserem Haus. Unsere führenden Trauringpartner sind die Qualitätsfirmen Gerstner, Saint Maurice und Rubin. 
+
+
+Für einen guten Start in das gemeinsame Glück – Ihr Team des [Juwelier Fein in Bingen](/).

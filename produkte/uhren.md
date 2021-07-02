@@ -1,15 +1,15 @@
 ---
 layout: blank
 title: Uhren kaufen Bingen [Luxusuhren]
-description: Schauen Sie sich unsere Auswahl an Uhren, Luxusuhren & Schmuck an.
+description: Wenn Sie eine Vorliebe für hochwertige Uhren haben, vor allem in der Gegend um Bingen und des Rheins entland, dann sind sie bei unserem Juwelier in Bingen richtig.
 permalink: /produkte/uhren
 ---
 
-## Uhren kaufen Bingen
+## Uhren kaufen in Bingen
 
-Wenn Sie eine Vorliebe für hochwertige Uhren haben, vor allem in der Gegend um Bingen und des Rheins entland, dann sind sie bei unserem Juwelier in Bingen richtig.
+Zeiten ändern sich – aber bleiben nicht stehen. Unsere Traditionsmarken der führenden Uhrenhersteller Seiko, Dugena und Boccia bürgen für beständige Qualität. Ob Chronograph, Solar-, Automatik- oder Quarzuhr – wir finden gemeinsam die Uhr, die am besten zu Ihnen passt. Auch AllergikerInnen können sich den Wunsch einer Uhr, die zu Ihren Bedürfnissen passt, erfüllen. Die passenden Titanuhren finden Sie bei uns im Haus. Wir freuen uns auf Sie!
 
-Hier bei Juwelier Fein sind wir stolz auf unsere Auswahl an Luxusuhren. 
+Hier bei [Juwelier Fein in Bingen](/) sind wir stolz auf unsere Auswahl an Luxusuhren. 
 
 Von Tag-Heuer, Movado, Cartier bis hin zu Rolex, um nur ein paar zu nennen. Unsere Uhren werden von unseren zertifizierten Schweizer Uhrmachern sorgfältig und komplett überholt, innen und außen, bis zu einem 99% neuwertigen Zustand.
 
@@ -34,3 +34,8 @@ Wenn Sie eine hochwertige Uhr kaufen, ist es wichtig, dass Sie bei einem seriös
 Wenn Sie die Investition in eine schöne Uhr tätigen, ist es nur natürlich, dass Sie ein Qualitätsprodukt kaufen möchten. Bei unserem Juwelier in Bingen bieten wir nur gebrauchte Uhren an, die in einen neuwertigen Zustand versetzt wurden. Wir kaufen und verkaufen eine große Auswahl an großartigen Zeitmessern von den besten Uhrmachern der Welt, so dass Sie sicher sind, die perfekte Uhr zu finden, wenn Sie bei uns einkaufen.
 
 Wenn Sie auf der Suche nach hochwertigen Uhren in Bingen sind, können Sie mit einem Besuch in unserem Geschäft nichts falsch machen. Wir bieten eine zweijährige Garantie für jede gebrauchte Uhr, die wir verkaufen, und wir werden Ihnen gerne helfen, die Marke der Uhr, die Sie suchen, aufzuspüren. Wir bieten auch Uhrenreparaturen an, wenn Sie einen älteren Zeitmesser haben, der eine Restaurierung benötigt.
+
+
+## Uhrenservice in Bingen
+
+Bleibt Ihre Uhr mal stehen oder zeigt nicht mehr die richtige Zeit an, können Sie gerne auf uns zukommen. Wir schicken Ihre Uhr zu unserem Uhrmacher und lassen Ihnen bei Bedarf erst einmal unverbindlich einen Kostenvoranschlag zukommen. Auch Nobeluhren fallen unter diese Serviceleistung. Haben Sie andere Anliegen, wie etwa einen Batteriewechsel, können Sie uns gerne Ihre Uhr vorbeibringen, welche wir vor Ort für sie behandeln werden. 
