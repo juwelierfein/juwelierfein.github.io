@@ -1,0 +1,22 @@
+I"D<p>Mit unserem Kontaktformular geht es allerdings am schnellsten.</p>
+
+<form action="https://formspree.io/f/xpzklbyg" method="POST" autocomplete="off">
+
+  <div class="form-control">
+     <input type="name" required="" /> 
+      <label>Ihr Name:</label>
+  </div>
+
+  <div class="form-control">
+    <input type="email" required="" />
+    <label>Ihre E-Mail:</label>
+  </div>
+
+  <div class="form-control">
+  <input type="textarea" required="" />
+  <label>Ihre Nachricht:</label>
+  </div>
+
+  <button class="submit--button" type="submit" value="Send">Nachricht senden!</button>
+</form>
+:ET

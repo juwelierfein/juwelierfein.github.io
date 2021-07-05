@@ -1,0 +1,20 @@
+I"Ò<form action="/" method="POST" autocomplete="off">
+
+  <div class="form-control">
+     <input type="name" required="" /> 
+      <label>Ihr Name:</label>
+  </div>
+
+  <div class="form-control">
+    <input type="email" required="" />
+    <label>Ihre E-Mail:</label>
+  </div>
+
+  <div class="form-control">
+  <input type="textarea" required="" />
+  <label>Ihre Nachricht:</label>
+  </div>
+
+  <button class="submit--button" type="submit" value="Send">Send</button>
+</form>
+:ET

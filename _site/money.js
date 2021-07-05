@@ -35,6 +35,22 @@ function run() {
 
 
 
+
+const labels = document.querySelectorAll('.form-control label')
+
+
+labels.forEach(label => {
+    label.innerHTML = label.innerText
+        .split('')
+        .map((letter, idx) => `<span style="transition-delay:${idx * 50}ms">${letter}</span>`)
+        .join('')
+})
+
+
+
+
+
+
 function debounce(func, wait = 20, immediate = true) {
   var timeout;
   return function() {
@@ -88,6 +104,7 @@ const subMenu = document.querySelector('.mobile-dropdown-nav')
 
 toggleNav.addEventListener("click", startMenu);
 carot.addEventListener("click", startSubMenu);
+
 
 function startMenu() {
   navMenu.classList.toggle('open')
@@ -147,6 +164,10 @@ function handleLeave() {
 //what function to use for enters and leaves
 triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter));
 triggers.forEach(trigger => trigger.addEventListener('mouseleave', handleLeave));
+
+
+
+
 
 
 
