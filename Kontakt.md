@@ -17,7 +17,7 @@ Mit unserem Kontaktformular geht es allerdings am schnellsten.
   </div>
 
   <div class="form-control">
-    <input type="email" required>
+    <input type="email" name="_replyto" required>
     <label>Email:</label>
   </div>
 
