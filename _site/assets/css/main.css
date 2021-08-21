@@ -67,6 +67,10 @@ a.toggle-nav { position: absolute; top: 0px; right: 48px; }
 
 .social { text-align: center; }
 
+#insta { cursor: pointer; padding-top: 12px; }
+
+@media only screen and (min-width: 600px) { .mobile-nav-main { display: flex; justify-content: center; align-items: center; } }
+
 @media only screen and (max-width: 600px) { .nav-logo { background-color: #ffffff; text-align: left; padding-left: 32px; margin: 12px 0; } }
 
 /* media query*/
