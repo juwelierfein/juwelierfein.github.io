@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="{{ site.lang | default: "en-US" }}">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
+    {% if page.noindex %}<META NAME="ROBOTS" CONTENT="NOINDEX,FOLLOW"/>{% endif %}
     
-    
-    <title>404</title>
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
     
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -87,74 +87,84 @@
 
   <section id="hero_outer">
 
-      <section id="hero" class="blank">
+      <section id="hero">
         <div class="content">
+        <p>Jetzt online Termin vereinbaren.</p>
       </div>
       </section>
 
-      <section id="hero_content" class="blank">
+      <section id="hero_content">
 
+        <span>nicht gefunden</span>
         <h1>404</h1>
-        <p>Nicht gefunden</p>
+        <p>Leider existiert die Seite nicht.</p>
 
+            <a href="/kontakt">
+          <button>Kontaktieren</button>
+            </a>
+    
       </section> 
     </div>
   </section>
 
 
   <section id="text">
-    <div class="wrapper blank">
+    <div class="wrapper">
 
-        <p>Nichts gefunden</p>
+        <h2>Schauen Sie sich unsere Produkte an:</h2>
 
-
-
+        <ul>
+            <li><a href="/produkte/ohrschmuck">Ohrloch stechen</a></li>
+            <li><a href="/produkte/silberschmuck">Silberschmuck</a></li>
+            <li><a href="/produkte/goldschmuck">Goldschmuck</a></li>
+            <li><a href="/produkte/ringe">Trauringe</a></li>
+            <li><a href="/kontakt">Kontakt</a></li>
+        </ul>
     </div>
   </section>
   
 
 
-
-
-<footer>
-  <div class="wrapper">
-
-    <div class="footer_logo">
-      <img src="/assets/img/logo.svg" alt="">
+  <footer>
+    <div class="wrapper">
+  
+      <div class="footer_logo">
+        <img src="/assets/img/logo.svg" alt="">
+      </div>
+  
+      <div class="footer_links">
+        <h4>Kontakt</h4>
+        <div class="footer_link">Juwelier Fein</div>
+        <div class="footer_link">Basilikastraße 30</div>
+        <div class="footer_link">55411 Bingen</div>
+        <div class="footer_link">06721 3087840</div>
+        <div class="footer_link">Juwelier-Fein@gmx.de</div>
+      </div>
+  
+      <div class="footer_links">
+        <h4>Informationen</h4>
+        <div class="footer_link"><a href="/wichtig">Impressum</a></div>
+        <div class="footer_link"><a href="/wichtig2">Datenschutz</a></div>
+        <div class="footer_link"><a href="https://www.instagram.com/juwelierbingen/" target="_blank">Instagram</a></div>
+  
+   
+  
+      </div>
+  
+      <div class="footer_links">
+        <h4>Öffnungszeiten</h4>
+        <div class="footer_link">Montag - Freitag</div>
+        <div class="footer_link">09:00 Uhr - 18:00 Uhr</div>
+      </div>
+  
     </div>
-
-    <div class="footer_links">
-      <h4>Kontakt</h4>
-      <div class="footer_link">Juwelier Fein</div>
-      <div class="footer_link">Basilikastraße 30</div>
-      <div class="footer_link">55411 Bingen</div>
-      <div class="footer_link">06721 3087840</div>
-      <div class="footer_link">Juwelier-Fein@gmx.de</div>
-    </div>
-
-    <div class="footer_links">
-      <h4>Informationen</h4>
-      <div class="footer_link"><a href="/wichtig">Impressum</a></div>
-      <div class="footer_link"><a href="/wichtig2">Datenschutz</a></div>
-      <div class="footer_link"><a href="https://www.instagram.com/juwelierbingen/" target="_blank">Instagram</a></div>
-
- 
-
-    </div>
-
-    <div class="footer_links">
-      <h4>Öffnungszeiten</h4>
-      <div class="footer_link">Montag - Freitag</div>
-      <div class="footer_link">09:00 Uhr - 18:00 Uhr</div>
-    </div>
-
-  </div>
-</footer>
-
-
-
-
-
-<script src="/money.js"></script>
-</body>
-</html>
+  </footer>
+  
+  
+  
+  
+  
+  <script src="/money.js"></script>
+  </body>
+  </html>
+  
