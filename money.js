@@ -15,7 +15,7 @@ window.onload = function(){
 const heroChange = document.querySelector('#hero');
 
 let idx = 0;
-let interval = setInterval(run, 2000)
+let interval = setInterval(run, 4000)
 bgImages = [
   "/assets/img/bg1.jpg",
   "/assets/img/bg2.jpg",

@@ -20,6 +20,8 @@ p { color: #606e7c; line-height: 26px; font-size: 18px; margin: 24px 0; }
 
 img { max-width: 100%; }
 
+ul { color: #606e7c; line-height: 30px; font-size: 20px; }
+
 button { font-family: Baskerville; letter-spacing: 0.03rem; padding: 16px 36px; border: none; margin-top: 12px; background-color: #E5D7BE; color: #846734; text-transform: uppercase; font-size: 12px; cursor: pointer; }
 
 .wrapper { width: 1100px; max-width: 90%; margin: 3rem auto; }
@@ -78,7 +80,7 @@ a.toggle-nav { position: absolute; top: 0px; right: 48px; }
 
 /* media query*/
 /* hero */
-#hero { background-image: url(/assets/img/picture.png); height: 550px; width: 100%; background-position: center; background-size: cover; position: relative; -webkit-transition: background-image 2s ease-in-out; transition: background-image 2s ease-in-out; }
+#hero { background-image: url(/assets/img/picture.png); height: 550px; width: 100%; background-position: center; background-size: cover; position: relative; -webkit-transition: background-image 1s ease-in-out; transition: background-image 1s ease-in-out; }
 
 #hero .content { color: white; position: absolute; bottom: 4%; left: 4%; font-size: 32px; width: 60%; line-height: 36px; }
 

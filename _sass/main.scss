@@ -99,6 +99,12 @@ img {
 }
 
 
+ul {
+  color: #606e7c;
+  line-height: 30px;
+  font-size: 20px;
+}
+
 button {
   font-family: Baskerville;
   letter-spacing: 0.03rem;
@@ -442,8 +448,8 @@ a.toggle-nav {
   background-position: center;
   background-size: cover;
   position: relative;
-  -webkit-transition: background-image 2s ease-in-out;
-  transition: background-image 2s ease-in-out;
+  -webkit-transition: background-image 1s ease-in-out;
+  transition: background-image 1s ease-in-out;
 }
 
 #hero .content {
