@@ -1,8 +1,5 @@
 ---
 layout: default
-title: Juwelier Fein
+title: Ihr Juwelier Fein aus Bingen - Juwelier Bingen
 ---
 
-## You're ready to go!
-
-Start developing your Jekyll website.
