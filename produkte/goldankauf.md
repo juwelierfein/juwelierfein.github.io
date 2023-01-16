@@ -2,7 +2,7 @@
 layout: blank
 title: Goldankauf Bingen - Juwelier Bingen
 description: 
-permalink: /produkte/ohrschmuck
+permalink: /produkte/goldankauf
 ---
 
 Sie besitzen alten Schmuck, den Sie geerbt haben oder einfach nicht mehr tragen? Haben Sie seit Ihrem letzten Zahnarztbesuch Dentalgold und wissen nicht, was Sie damit anfangen können? Wir sind hier Ihr persönlicher Ansprechpartner und helfen Ihnen gerne weiter.
