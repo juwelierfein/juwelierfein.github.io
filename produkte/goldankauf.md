@@ -29,6 +29,7 @@ Bei einem Goldankauf kann man folgende Gegenstände abgeben:
 - Elektronik: Goldgehäuse von Elektronikgeräten wie Smartphones, Tablets und Laptops,
 - Andere Gegenstände: Goldbesteck, Goldmedaillen, Zahngold und andere Gegenstände/ Schmuckstücke, die aus Gold, Silber, Platin oder Palladium bestehen.
  
-*Die Feingehaltsbestimmung mittels Strichprobe:
+Die Feingehaltsbestimmung mittels Strichprobe:
+
 Die Feingehaltsbestimmung mittels Strichprobe beinhaltet das Entnehmen einer Probe von einem Schmuckstück und die Überprüfung des Feingehalts durch den Einsatz von Säuren. Der Abrieb des Schmuckstücks wird auf einen Prüfstein aufgetragen und dann mittels Säuren auf den Feingehalt getestet. Wenn sich der Abrieb unter der Säure nicht oder nur gering verändert, bedeutet dies ein positives Ergebnis. Wenn der Abrieb sich auflöst, weist dies auf einen niedrigeren Feingehalt oder darauf hin, dass das Stück aus einem unedlen Metall besteht. Diese Methode ist allerdings nur für die Feingehalte 333 ‰ / 585 ‰ / 750 ‰ und 900 ‰ genau. In speziellen Fällen wird eine umfangreiche Röntgenfluoreszenzanalyse (RFA) des Altgoldes vorgenommen. 
 Haben Sie noch Fragen? Zögern Sie nicht, uns anzurufen oder eine Mail zu schreiben - wir freuen uns auf Ihren Besuch! 
