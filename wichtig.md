@@ -7,12 +7,11 @@ permalink: wichtig
 
 Laut TMG §
 
-Goldankauf Fein
-Verantwortlich: Markus Karatas
-Basilikastraße 30
-55411 Bingen am Rhein
-DE Tel: 06721 3087840
-Email: ayherbert@yahoo.de
+Goldankauf Fein GmbH
+Marcus Thomas,
+Basilikastraße 30, 55411 Bingen am Rhein,
+TEL: 067213087840.
+E-Mail: Juwelier.fein@gmx.de
 
 Haftung für Inhalte
 
