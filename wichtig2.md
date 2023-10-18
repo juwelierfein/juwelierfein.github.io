@@ -10,7 +10,11 @@ Datenschutzerklärung
 Information über die Erhebung personenbezogener Daten und Kontaktdaten des Verantwortlichen
 Im Folgenden informieren wir Sie über den Umgang mit Ihren personenbezogenen Daten bei Nutzung unserer Website. Personenbezogene Daten sind hierbei alle Daten, mit denen Sie persönlich identifiziert werden können.
 
-Verantwortlicher für die Datenverarbeitung auf dieser Website im Sinne der Datenschutz-Grundverordnung (DSGVO) ist Markus Karatas, Rathaustraße 27, 55411 Bingen am Rhein, Deutschland, Tel.: 06721 70 83 680, E-Mail: ayherbert@yahoo.de
+Verantwortlicher für die Datenverarbeitung auf dieser Website im Sinne der Datenschutz-Grundverordnung (DSGVO) ist Goldankauf Fein GmbH
+Marcus Thomas,
+Basilikastraße 30, 55411 Bingen am Rhein,
+TEL: 067213087840.
+E-Mail: Juwelier.fein@gmx.de
 
 Der für die Verarbeitung von personenbezogenen Daten Verantwortliche ist diejenige natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet.
 
