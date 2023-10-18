@@ -2,7 +2,7 @@
 layout: blank
 title: Datenschutz
 description: Unser Datenschutz
-permalink: wichtig
+permalink: wichtig2
 ---
 
 Datenschutzerklärung
