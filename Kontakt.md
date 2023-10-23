@@ -8,7 +8,10 @@ permalink: kontakt
 Mit unserem Kontaktformular geht es allerdings am schnellsten.
 
 
-<form action="https://formspree.io/f/xpzklbyg" method="POST" autocomplete="off">
+<form
+  action="https://formspree.io/f/mdorbeya"
+  method="POST"
+>
 
 
   <div class="form-control">
