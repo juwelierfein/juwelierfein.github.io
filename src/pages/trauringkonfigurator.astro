@@ -1,0 +1,32 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Trauring-Konfigurator - Juwelier Fein Bingen"
+  description="Gestalten Sie Ihre Trauringe online selbst."
+>
+  <div class="konfigurator">
+    <iframe
+      src="https://konfigurator.saintmaurice.de/public/5eddf9cef064ad393aab880a/configurator"
+      loading="lazy"
+      allow="fullscreen"
+      title="Trauring-Konfigurator von Saint Maurice"></iframe>
+  </div>
+</Base>
+
+<style>
+  .konfigurator {
+    width: 100%;
+    height: calc(100vh - 110px);
+    min-height: 700px;
+    overflow: hidden;
+  }
+  /* Kopfbereich des Konfigurators (Logo/Menü) abschneiden */
+  iframe {
+    display: block;
+    width: 100%;
+    height: calc(100% + 125px);
+    margin-top: -125px;
+    border: 0;
+  }
+</style>
