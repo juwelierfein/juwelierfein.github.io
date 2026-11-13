@@ -1005,3 +1005,41 @@ input[type=email],
   border-color: #d8c29d;
   box-shadow: 0 0 0 3px rgba(216, 194, 157, 0.35);
 }
+
+
+/* Juwelier aus Tradition: Zeichnung von Bingen als dezenter Hintergrund */
+.tradition {
+  position: relative;
+  overflow: hidden;
+}
+
+.tradition::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 55%;
+  background: url(/assets/img/bingen-zeichnung.webp) left center / cover no-repeat;
+  opacity: 0.10;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to right, #000 60%, transparent);
+  mask-image: linear-gradient(to right, #000 60%, transparent);
+}
+
+@media only screen and (max-width: 599px) {
+  .tradition::before {
+    width: 100%;
+  }
+}
+
+.tradition > #text {
+  position: relative;
+  z-index: 1;
+}
+
+/* kein weißer Streifen zwischen Zeichnung und Bildreihe */
+.tradition + #images {
+  margin-top: 0;
+  margin-bottom: 0;
+}
