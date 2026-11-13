@@ -1,0 +1,209 @@
+---
+const reviews = [
+  { name: 'Hanna Knieps', text: 'Wir hatten heute ein Beratungsgespräch für unsere Trauringe und waren rundum sehr zufrieden. Tolle und nette Beratung. Eine sehr große Auswahl von modernen bis klassischen Ringen. Sehr empfehlenswert!' },
+  { name: 'Tanja Gotschi', text: 'Wir haben die Eheringe dort gekauft und wurden sehr gut beraten. Dabei wurde sich genügend Zeit genommen und auf unsere Wünsche eingelassen. Top!' },
+  { name: 'Piet', text: 'Nach einigen Anrufen in der Gegend habe ich mit weitem Abstand den besten Preis für meinen Goldankauf bei Juwelier Fein in Bingen bekommen. Sehr gut.' },
+  { name: 'René K', text: 'Sehr kompetent und sehr freundlich und sympathisch! Man fühlt sich sehr wohl und gut aufgehoben. Keinerlei Kaufdruck und super Beratung. Besuch war für Trauringe.' },
+  { name: 'Christiane Schneider', text: 'Ich war heute im Geschäft und wurde noch nie so gut bei einem Juwelier beraten wie hier. Sehr nettes, kompetentes und geduldiges Fachpersonal. Es wird hervorragend auf den Kunden eingegangen.' },
+  { name: 'Alexander Rohde', text: 'Ich habe hier den Goldankauf-Service genutzt und konnte schnell, freundlich und zu einem fairen Preis verkaufen. Kann es wirklich nur empfehlen, danke!' },
+  { name: 'Sabrina Wittmer', text: 'Wir sind so begeistert von der Beratung, sehr sympathisch, freundlich und kompetent. Können wir von ganzem Herzen weiterempfehlen und freuen uns sehr auf unsere wunderschönen Trauringe!' },
+  { name: 'Anne-Kathrin Bell', text: 'Ich habe hier sowohl meine Uhr als auch ein neues Armband an mein Geburtskettchen machen lassen. Hier stimmt einfach alles: die Qualität, der Service und der Preis. Gerne wieder!' },
+];
+const mapsUrl = 'https://www.google.com/maps/search/?api=1&query=Goldankauf+%26+Juwelier+Fein+Basilikastra%C3%9Fe+30+55411+Bingen+am+Rhein';
+---
+<section class="reviews" aria-label="Kundenbewertungen">
+  <div class="reviews-head">
+    <a class="reviews-google" href={mapsUrl} target="_blank" rel="noopener">
+      <svg viewBox="0 0 48 48" width="22" height="22" aria-hidden="true">
+        <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+        <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+        <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+        <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+      </svg>
+      <span>Google-Bewertungen</span>
+    </a>
+    <span class="reviews-kicker">Das sagen unsere Kunden</span>
+    <h2>5,0 <span class="stars" aria-hidden="true">★★★★★</span></h2>
+    <p>Basierend auf 93 Google-Rezensionen</p>
+  </div>
+
+  <div class="reviews-slider">
+    <div class="reviews-track" tabindex="0">
+      {reviews.map((r) => (
+        <figure class="review">
+          <div class="stars" aria-label="5 von 5 Sternen">★★★★★</div>
+          <blockquote>{r.text}</blockquote>
+          <figcaption>{r.name}<span>Google-Rezension</span></figcaption>
+        </figure>
+      ))}
+    </div>
+    <div class="reviews-nav">
+      <button class="reviews-arrow prev" type="button" aria-label="Zurück">&#8249;</button>
+      <button class="reviews-arrow next" type="button" aria-label="Weiter">&#8250;</button>
+    </div>
+  </div>
+
+  <p class="reviews-more">
+    <a href={mapsUrl} target="_blank" rel="noopener">Alle Bewertungen auf Google ansehen &rarr;</a>
+  </p>
+</section>
+
+<style>
+  .reviews {
+    padding: 80px 0;
+    background: #faf7f2;
+    border-top: 1px solid #efe6d6;
+    border-bottom: 1px solid #efe6d6;
+  }
+  .reviews-head {
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto 40px;
+  }
+  .reviews-google {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    color: #b89b63;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  .reviews-google:hover span {
+    color: #8f7545;
+  }
+  .reviews-more {
+    text-align: center;
+    margin: 22px 0 0;
+  }
+  .reviews-more a {
+    color: #2b3744;
+    text-decoration: none;
+    border-bottom: 1px solid #d8c29d;
+    padding-bottom: 2px;
+  }
+  .reviews-more a:hover {
+    color: #b89b63;
+  }
+  .reviews-kicker {
+    display: block;
+    font-family: Baskerville;
+    color: #2b3744;
+    margin-bottom: 4px;
+  }
+  .reviews-head h2 {
+    padding: 0;
+  }
+  .reviews-head h2::before {
+    display: none;
+  }
+  .reviews-head p {
+    margin: 6px 0 0;
+  }
+  .stars {
+    color: #d8c29d;
+    letter-spacing: 3px;
+  }
+  .reviews-slider {
+    position: relative;
+    width: 1100px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .reviews-track {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 4px 2px 8px;
+    outline: none;
+  }
+  .reviews-track::-webkit-scrollbar {
+    display: none;
+  }
+  .review {
+    flex: 0 0 calc((100% - 48px) / 3);
+    scroll-snap-align: start;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 32px 28px 26px;
+    background: #fff;
+    border: 1px solid #efe6d6;
+    border-top: 2px solid #d8c29d;
+    display: flex;
+    flex-direction: column;
+  }
+  .review blockquote {
+    margin: 14px 0 22px;
+    flex: 1;
+    color: #2b3744;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+  .review figcaption {
+    font-family: Baskerville;
+    color: #1a232c;
+    font-size: 16px;
+  }
+  .review figcaption span {
+    display: block;
+    margin-top: 2px;
+    font-family: Jost, sans-serif;
+    font-size: 13px;
+    color: #8a8f95;
+    letter-spacing: 0.03em;
+  }
+  .reviews-nav {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 28px;
+  }
+  .reviews-arrow {
+    box-sizing: border-box;
+    width: 46px;
+    height: 46px;
+    min-width: 0;
+    padding: 0 0 4px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #d8c29d;
+    background: #fff;
+    color: #2b3744;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+  .reviews-arrow:hover {
+    background: #d8c29d;
+    color: #fff;
+  }
+
+  @media (max-width: 899px) {
+    .review { flex-basis: calc((100% - 24px) / 2); }
+  }
+  @media (max-width: 599px) {
+    .reviews { padding: 56px 0; }
+    .review { flex-basis: 88%; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.reviews-slider').forEach((slider) => {
+    const track = slider.querySelector('.reviews-track');
+    const step = () => (track.querySelector('.review').offsetWidth + 24);
+    slider.querySelector('.prev').addEventListener('click', () => {
+      track.scrollBy({ left: -step() });
+    });
+    slider.querySelector('.next').addEventListener('click', () => {
+      const end = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+      end ? track.scrollTo({ left: 0 }) : track.scrollBy({ left: step() });
+    });
+  });
+</script>
