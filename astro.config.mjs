@@ -8,5 +8,13 @@ export default defineConfig({
   redirects: {
     '/produkte/silberschmuck': '/',
   },
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      filter: (page) => !/\/(404|google[0-9a-f]+)(\.html)?$/.test(page),
+      serialize(item) {
+        item.url = item.url.replace(/\.html$/, '').replace(/\/index$/, '/');
+        return item;
+      },
+    }),
+  ],
 });

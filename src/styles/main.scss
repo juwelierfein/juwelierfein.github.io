@@ -20,9 +20,25 @@ body {
 
 
 .notification {
+  position: relative;
   background-color: black;
   padding: 4px;
   text-align: center;
+}
+
+.notification-insta {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.notification-insta img {
+  display: block;
+  height: 22px;
+  width: auto;
 }
 
 
@@ -88,7 +104,7 @@ h3 {
 }
 
 p {
-  color: #606e7c;
+  color: #2b3744;
   line-height: 26px;
   font-size: 18px;
   margin: 24px 0;
@@ -100,7 +116,7 @@ img {
 
 
 ul {
-  color: #606e7c;
+  color: #2b3744;
   line-height: 30px;
   font-size: 20px;
 }
@@ -426,10 +442,19 @@ a.toggle-nav {
 
 .mobile-nav ul li a { 
   text-decoration: none;
-  color: #606e7c;
-  font-size: 14px;
+  color: #1a232c;
+  font-size: 16px;
+  font-weight: 500;
   text-transform: uppercase;
 } 
+
+.mobile-nav ul li a {
+  transition: color .2s ease;
+}
+
+.mobile-nav ul li a:hover {
+  color: #d8c29d;
+}
 
 .carot.open { 
   transform: none;
@@ -480,7 +505,7 @@ a.toggle-nav {
 {
   position: relative;
   font-family: Baskerville;
-  color: #606e7c;
+  color: #2b3744;
 }
 
 
@@ -520,6 +545,26 @@ a.toggle-nav {
   margin: 0 auto;
 }
 
+/* Startseite: 50/50, Bild bündig am rechten Rand */
+#hero_outer.home {
+  width: 100%;
+  max-width: 100%;
+  gap: 0;
+}
+
+#hero_outer.home #hero {
+  flex: 0 0 50%;
+  width: 50%;
+}
+
+#hero_outer.home #hero_content {
+  flex: 0 0 auto;
+  width: calc(50% - 5vw);
+  max-width: none;
+  margin: 64px 0 64px 5vw;
+  padding: 0 4vw 0 32px;
+  box-sizing: border-box;
+}
 
 }
 
@@ -572,7 +617,7 @@ a.toggle-nav {
   #images {
     margin: 64px auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   #images img {
@@ -916,4 +961,47 @@ input[type=email],
   }
 
 
+}
+
+/* Textlinks immer in Gold, nie Browser-Blau/Violett */
+#text a,
+#text a:visited,
+.intro a,
+.intro a:visited {
+  color: $firstColor;
+}
+
+#text a:hover,
+.intro a:hover {
+  color: darken($firstColor, 12%);
+}
+
+
+/* Einheitliche Formularfelder (Kontakt + Terminanfrage) */
+.field {
+  margin: 0 0 20px;
+}
+.field label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+.field input,
+.field textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  font: inherit;
+  font-size: 18px;
+  color: #102a43;
+  background: #fff;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+}
+.field input:focus,
+.field textarea:focus {
+  outline: 0;
+  border-color: #d8c29d;
+  box-shadow: 0 0 0 3px rgba(216, 194, 157, 0.35);
 }

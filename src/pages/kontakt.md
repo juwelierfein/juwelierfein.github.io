@@ -8,26 +8,19 @@ description: "Schreiben Sie uns! Einfach an kontakt@info-juwelier-fein.de oder n
 Mit unserem Kontaktformular geht es allerdings am schnellsten.
 
 
-<form
-  action="https://formspree.io/f/mdorbeya"
-  method="POST"
->
-
-
-  <div class="form-control">
-     <input type="name" required> 
-      <label>Name:</label>
-  </div>
-
-  <div class="form-control">
-    <input type="email" name="_replyto" required>
-    <label>Email:</label>
-  </div>
-
-  <div class="form-control">
-  <input name="message" type="textarea" required>
-  <label>Message:</label>
-  </div>
-
-  <button class="submit--button" type="submit" value="Send">Nachricht senden!</button>
+<form action="https://formspree.io/f/mdorbeya" method="POST" class="simple-form">
+<input type="hidden" name="_subject" value="Kontaktanfrage Website" />
+<div class="field">
+<label for="k-name">Name:</label>
+<input type="text" id="k-name" name="name" required />
+</div>
+<div class="field">
+<label for="k-email">E-Mail:</label>
+<input type="email" id="k-email" name="_replyto" required />
+</div>
+<div class="field">
+<label for="k-message">Nachricht:</label>
+<textarea id="k-message" name="message" rows="5" required></textarea>
+</div>
+<button class="submit--button" type="submit">Nachricht senden</button>
 </form>

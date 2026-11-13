@@ -5,6 +5,21 @@ import Base from '../layouts/Base.astro';
   title="Trauring-Konfigurator - Juwelier Fein Bingen"
   description="Gestalten Sie Ihre Trauringe online selbst."
 >
+  <section class="intro">
+    <h1>Trauring-Konfigurator</h1>
+    <p>
+      Gestalten Sie Ihre Trauringe ganz nach Ihren Vorstellungen: Wählen Sie
+      Material, Breite, Profil und Oberfläche und fügen Sie auf Wunsch
+      Diamanten oder eine persönliche Gravur hinzu. Die Ringe werden direkt in
+      der Vorschau angezeigt, sodass Sie jede Änderung sofort sehen.
+    </p>
+    <p>
+      Haben Sie Fragen oder möchten Ihre Auswahl anprobieren? Wir beraten Sie
+      gerne persönlich in unserem Geschäft in Bingen &ndash;
+      <a href="#termin">vereinbaren Sie einen Termin</a>.
+    </p>
+  </section>
+
   <div class="konfigurator">
     <iframe
       src="https://konfigurator.saintmaurice.de/public/5eddf9cef064ad393aab880a/configurator"
@@ -12,9 +27,72 @@ import Base from '../layouts/Base.astro';
       allow="fullscreen"
       title="Trauring-Konfigurator von Saint Maurice"></iframe>
   </div>
+
+  <section id="termin" class="termin">
+    <h2>Termin vereinbaren</h2>
+    <p>
+      Sie haben Ihre Ringe konfiguriert oder möchten sich erst beraten lassen?
+      Hinterlassen Sie uns Ihre Wunschzeit, wir melden uns zur Bestätigung.
+    </p>
+    <form action="https://formspree.io/f/mdorbeya" method="POST">
+      <input type="hidden" name="_subject" value="Terminanfrage Trauring-Beratung" />
+
+      <div class="field">
+        <label for="t-name">Name:</label>
+        <input type="text" id="t-name" name="name" required />
+      </div>
+
+      <div class="field">
+        <label for="t-_replyto">E-Mail:</label>
+        <input type="email" id="t-_replyto" name="_replyto" required />
+      </div>
+
+      <div class="field">
+        <label for="t-telefon">Telefon (optional):</label>
+        <input type="tel" id="t-telefon" name="telefon" />
+      </div>
+
+      <div class="field">
+        <label for="t-wunschtermin">Wunschtermin (Datum/Uhrzeit):</label>
+        <input type="text" id="t-wunschtermin" name="wunschtermin" required />
+      </div>
+
+      <div class="field">
+        <label for="t-nachricht">Nachricht / Ihre Konfiguration (optional):</label>
+        <textarea id="t-nachricht" name="nachricht" rows="4"></textarea>
+      </div>
+
+      <button class="submit--button" type="submit">Termin anfragen</button>
+    </form>
+  </section>
 </Base>
 
 <style>
+  .intro {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 20px 30px;
+    text-align: center;
+  }
+  .termin {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 50px 20px 70px;
+  }
+  .termin h2 {
+    text-align: center;
+  }
+  .termin > p {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .intro h1 {
+    margin-bottom: 16px;
+  }
+  .intro p {
+    margin: 0 0 12px;
+    line-height: 1.7;
+  }
   .konfigurator {
     width: 100%;
     height: calc(100vh - 110px);
