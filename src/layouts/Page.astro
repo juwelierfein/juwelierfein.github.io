@@ -1,0 +1,23 @@
+---
+import Base from './Base.astro';
+const { frontmatter } = Astro.props;
+const { title, description } = frontmatter;
+---
+<Base title={title} description={description}>
+  <section id="hero_outer">
+    <section id="hero" class="blank">
+      <div class="content"></div>
+    </section>
+
+    <section id="hero_content" class="blank">
+      <h1>{title}</h1>
+      <p>{description}</p>
+    </section>
+  </section>
+
+  <section id="text">
+    <div class="wrapper blank">
+      <slot />
+    </div>
+  </section>
+</Base>
