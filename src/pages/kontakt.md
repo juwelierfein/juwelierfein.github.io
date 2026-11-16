@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/Page.astro
 title: "Kontakt"
-description: "Schreiben Sie uns! Einfach an kontakt@info-juwelier-fein.de oder nutzen Sie das unterstehende Kontaktformular. Natürlich erreichen Sie uns ebenfalls telefonisch unter der 06721 3087840."
+description: "Schreiben Sie uns! Einfach an kontakt@info-juwelier-fein.de oder nutzen Sie das untenstehende Kontaktformular. Natürlich erreichen Sie uns ebenfalls telefonisch unter 06721 3087840."
 ---
 
 
