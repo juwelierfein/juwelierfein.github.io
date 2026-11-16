@@ -539,6 +539,17 @@ a.toggle-nav {
   line-height: 36px;
 }
 
+/* Überblendebene für den Hero-Bilderwechsel */
+.hero-fade {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  pointer-events: none;
+}
+
 #hero p {
   color: white;
   font-size: 32px;
