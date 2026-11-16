@@ -9,6 +9,7 @@ const {
   image,
   imageLabel = '',
   slides = [],
+  divider = true,
 } = Astro.props;
 ---
 <section id="hero_outer" class="page-hero">
@@ -37,8 +38,16 @@ const {
     )}
   </section>
 </section>
+{divider && <div class="hero-divider" role="presentation"></div>}
 
 <style>
+  /* feiner goldener Trennstrich unter dem Hero */
+  .hero-divider {
+    width: min(1100px, 90%);
+    height: 1px;
+    margin: 0 auto;
+    background: linear-gradient(to right, transparent, #d8c29d 20%, #d8c29d 80%, transparent);
+  }
   #hero_outer.page-hero {
     margin-bottom: 56px;
   }

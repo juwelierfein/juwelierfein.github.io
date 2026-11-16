@@ -1,32 +1,25 @@
 ---
 import Base from '../layouts/Base.astro';
 import Reviews from '../components/Reviews.astro';
+import PageHero from '../components/PageHero.astro';
+import RatingBadge from '../components/RatingBadge.astro';
 import ServiceColumns from '../components/ServiceColumns.astro';
 import ContactBanner from '../components/ContactBanner.astro';
 import TextColumns from '../components/TextColumns.astro';
 ---
 <Base title="Ihr Juwelier Fein aus Bingen - Juwelier Bingen" description="Juwelier Fein in Bingen am Rhein: Trauringe, Uhren, Goldschmuck sowie Goldankauf. Seit fast 140 Jahren Ihr Juwelier in der Basilikastraße.">
 
-  <section id="hero_outer" class="home">
-
-      <section id="hero">
-        <div class="content">
-        <p>Jetzt online Termin vereinbaren.</p>
-      </div>
-      </section>
-
-      <section id="hero_content">
-
-        <span>aus Bingen am Rhein</span>
-        <h1>Juwelier Fein</h1>
-        <p>Tradition setzt sich durch, auch mit einem neuen Besitzer! Das fast 140 Jahre alte Juweliergeschäft wird im gleichen Sinne weitergeführt. Wir freuen uns auf Ihren Besuch!</p>
-
-            <a href="/kontakt">
-          <button>Kontaktieren</button>
-            </a>
-    
-      </section> 
-  </section>
+  <PageHero
+    kicker="aus Bingen am Rhein"
+    title="Juwelier Fein"
+    text="Tradition setzt sich durch, auch mit einem neuen Besitzer! Das fast 140 Jahre alte Juweliergeschäft wird im gleichen Sinne weitergeführt. Wir freuen uns auf Ihren Besuch!"
+    buttonLabel="Kontaktieren"
+    buttonHref="/kontakt"
+    image="/assets/img/picture.webp"
+    imageLabel="Hände mit Ringen und Armband, Juwelier Fein in Bingen"
+  >
+    <RatingBadge />
+  </PageHero>
 
 
   <div class="tradition">
@@ -50,7 +43,7 @@ import TextColumns from '../components/TextColumns.astro';
 
    <a href="/produkte/uhren">
     <div class="row_img">
-    <img src="/assets/img/verlobungsring-antrag-ring-anstecken-bingen.webp" alt="">
+    <img src="/assets/img/uhren-vitrine-juwelier-bingen.webp" alt="Uhren-Vitrine im Juwelier Fein in Bingen: Armbanduhren werden von Hand präsentiert">
     <div class="row_img_content">
       <h3>Uhren</h3>
     </div>

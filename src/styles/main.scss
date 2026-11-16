@@ -597,27 +597,6 @@ a.toggle-nav {
   margin: 0 auto;
 }
 
-/* Startseite: 50/50, Bild bündig am rechten Rand */
-#hero_outer.home {
-  width: 100%;
-  max-width: 100%;
-  gap: 0;
-}
-
-#hero_outer.home #hero {
-  flex: 0 0 50%;
-  width: 50%;
-}
-
-#hero_outer.home #hero_content {
-  flex: 0 0 auto;
-  width: calc(50% - 5vw);
-  max-width: none;
-  margin: 64px 0 64px 5vw;
-  padding: 0 4vw 0 32px;
-  box-sizing: border-box;
-}
-
 }
 
 
