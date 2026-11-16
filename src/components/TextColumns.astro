@@ -1,0 +1,98 @@
+---
+// Zwei Textspalten mit Foto (Standard: 220x280, eckig) links; der Text umfließt das Foto und beginnt darunter wieder links. imageSize="mini" = 120x120 neben dem Text.
+// items: [{ image, alt, title, paragraphs: string[] (HTML erlaubt) }]
+const { items, imageSize = 'large' } = Astro.props;
+---
+<section class:list={['cols', imageSize]}>
+  {items.map((item) => (
+    <div class="col">
+      <img class="col-img" src={item.image} alt={item.alt} width={imageSize === 'large' ? 220 : 120} height={imageSize === 'large' ? 280 : 120} loading="lazy" />
+      <div class="col-body">
+        <h2 class="col-title">{item.title}</h2>
+        {item.paragraphs.map((html) => <p set:html={html} />)}
+      </div>
+    </div>
+  ))}
+</section>
+
+<style>
+  .cols {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px 110px;
+    width: 1100px;
+    max-width: 90%;
+    margin: 64px auto;
+  }
+  .col {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+  }
+  .col-img {
+    flex: 0 0 120px;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-top: 6px;
+  }
+  .col-body {
+    flex: 1;
+    min-width: 0;
+  }
+  /* große Bilder: Text umfließt das Foto und beginnt darunter wieder ganz links */
+  .large .col {
+    display: flow-root;
+  }
+  .large .col-img {
+    float: left;
+    width: 220px;
+    height: 280px;
+    margin: 0 28px 12px 0;
+  }
+  .large .col-body {
+    display: block;
+  }
+  .large .col-title {
+    display: flow-root;
+  }
+  .col-title {
+    margin: 0 0 12px;
+    padding-top: 22px;
+    font-size: 28px;
+    line-height: 1.25;
+  }
+  .col p {
+    margin-top: 0;
+  }
+  .col-body :global(a),
+  .col-body :global(a:visited) {
+    color: #d8c29d;
+  }
+  .col-body :global(a:hover) {
+    color: #b89b63;
+  }
+  /* Handy: Foto steht über dem Text, damit Titel nicht abgeschnitten werden */
+  @media (max-width: 599px) {
+    .large .col-img {
+      float: none;
+      display: block;
+      width: 100%;
+      height: 240px;
+      margin: 0 0 18px;
+    }
+    .col {
+      flex-direction: column;
+      gap: 0;
+    }
+    .cols {
+      margin: 48px auto;
+      gap: 40px;
+    }
+  }
+  @media (min-width: 800px) {
+    .cols {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>

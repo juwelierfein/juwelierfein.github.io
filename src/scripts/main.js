@@ -3,7 +3,9 @@ document.querySelector('.notification > p')?.classList.add('open');
 
 // Hero-Hintergrund wechseln
 const hero = document.querySelector('#hero');
-const bgImages = [1, 2, 3].map((n) => `/assets/img/bg${n}.webp`);
+const bgImages = hero?.dataset.slides
+  ? hero.dataset.slides.split(',')
+  : [1, 2, 3].map((n) => `/assets/img/bg${n}.webp`);
 let idx = 0;
 if (hero) {
   const run = () => {

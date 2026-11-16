@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Jost';
+  src: url('/assets/fonts/Jost-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 $backgroundColor: #ffffff;
 $firstColor: #d8c29d;
 
@@ -8,7 +16,7 @@ body {
   padding: 0;
   border-top: 2px solid #d8c29d;
   overflow-x: hidden;
-  font-family: Jost;
+  font-family: Jost, "Helvetica Neue", Arial, sans-serif;
 }
 
 * {
@@ -35,6 +43,37 @@ body {
   align-items: center;
 }
 
+.notification-phone {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-family: Jost, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.03rem;
+  text-decoration: none;
+}
+
+.notification-phone svg {
+  width: 17px;
+  height: 17px;
+  color: #d8c29d;
+}
+
+.notification-phone:hover {
+  color: #d8c29d;
+}
+
+@media only screen and (max-width: 700px) {
+  .notification-phone span {
+    display: none;
+  }
+}
+
 .notification-insta img {
   display: block;
   height: 22px;
@@ -48,11 +87,19 @@ body {
   line-height: 26px;
   font-size: 13px;
   letter-spacing: 0.03rem;
-  font-family: Jost;
+  font-family: Jost, "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
   transform: translateY(100%);
   opacity: 0;
   transition: all .5s ease-in;
+}
+
+@media only screen and (max-width: 480px) {
+  .notification p {
+    font-size: 11px;
+    letter-spacing: 0.02rem;
+    padding: 0 56px;
+  }
 }
 
 .notification p.open {
@@ -62,8 +109,9 @@ body {
 
 
 h1 {
-  font-size: 64px;
-  line-height: 64px;
+  font-size: clamp(34px, 10.5vw, 64px);
+  line-height: 1.12;
+  overflow-wrap: break-word;
   margin: 12px 0;
   font-family: Baskerville;
   font-weight: 500;
@@ -213,10 +261,14 @@ button {
 
 
 
+#header {
+  position: relative;
+}
+
 a.toggle-nav {
   position: absolute;
-  top: 0px;
-  right: 48px; }
+  top: 36px;
+  right: 28px; }
 
 
 
@@ -615,13 +667,15 @@ a.toggle-nav {
 @media only screen and (min-width: 600px) {
 
   #images {
-    margin: 64px auto;
+    margin: 0 auto 64px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1.8fr 1fr 1fr;
+    gap: 0;
   }
 
   #images img {
-    height: 350px;
+    height: 320px;
+    display: block;
   }
   
 
@@ -718,35 +772,7 @@ a.toggle-nav {
 
 
 
-#one_image  {
-  background-image: url(/assets/img/picture.webp);
-  display: block;
-  height: 550px;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  width: 1100px;
-  max-width: 90%;
-  margin: 0 auto;
-}
 
-
-
-#one_image .content {
-  position: absolute;
-  bottom: 4%;
-  left: 4%;
-  font-size: 32px;
-  width: 60%;
-  line-height: 36px;
-}
-
-#one_image p {
-  color: white;
-  font-size: 32px;
-  width: 60%;
-  line-height: 36px;
-}
 
 
 

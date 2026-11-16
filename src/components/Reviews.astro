@@ -28,18 +28,18 @@ const mapsUrl = 'https://www.google.com/maps/search/?api=1&query=Goldankauf+%26+
   </div>
 
   <div class="reviews-slider">
-    <div class="reviews-track" tabindex="0">
-      {reviews.map((r) => (
-        <figure class="review">
-          <div class="stars" aria-label="5 von 5 Sternen">★★★★★</div>
-          <blockquote>{r.text}</blockquote>
-          <figcaption>{r.name}<span>Google-Rezension</span></figcaption>
-        </figure>
-      ))}
-    </div>
-    <div class="reviews-nav">
-      <button class="reviews-arrow prev" type="button" aria-label="Zurück">&#8249;</button>
-      <button class="reviews-arrow next" type="button" aria-label="Weiter">&#8250;</button>
+    <div class="reviews-track" tabindex="0" aria-label="Kundenbewertungen">
+      <div class="reviews-belt">
+        {[0, 1].map((copy) => (
+          reviews.map((r) => (
+            <figure class="review" aria-hidden={copy === 1 ? 'true' : undefined}>
+              <div class="stars" aria-label="5 von 5 Sternen">★★★★★</div>
+              <blockquote>{r.text}</blockquote>
+              <figcaption>{r.name}<span>Google-Rezension</span></figcaption>
+            </figure>
+          ))
+        ))}
+      </div>
     </div>
   </div>
 
@@ -105,35 +105,67 @@ const mapsUrl = 'https://www.google.com/maps/search/?api=1&query=Goldankauf+%26+
     letter-spacing: 3px;
   }
   .reviews-slider {
+    --w: min(1100px, 90vw);
     position: relative;
-    width: 1100px;
-    max-width: 90%;
-    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+    /* weiche Ränder links und rechts */
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
   }
   .reviews-track {
-    display: flex;
-    gap: 24px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    padding: 4px 2px 8px;
+    overflow: hidden;
+    padding: 4px 0 8px;
     outline: none;
   }
-  .reviews-track::-webkit-scrollbar {
-    display: none;
+  .reviews-belt {
+    display: flex;
+    width: max-content;
+    animation: reviews-marquee 90s linear infinite;
+    will-change: transform;
+  }
+  .reviews-slider:hover .reviews-belt,
+  .reviews-track:focus-within .reviews-belt {
+    animation-play-state: paused;
+  }
+  @keyframes reviews-marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reviews-track { overflow-x: auto; }
+    .reviews-belt { animation: none; }
   }
   .review {
-    flex: 0 0 calc((100% - 48px) / 3);
-    scroll-snap-align: start;
+    flex: 0 0 calc((var(--w) - 48px) / 3);
+    margin: 0 24px 0 0;
     box-sizing: border-box;
-    margin: 0;
     padding: 32px 28px 26px;
     background: #fff;
     border: 1px solid #efe6d6;
     border-top: 2px solid #d8c29d;
     display: flex;
     flex-direction: column;
+  }
+  /* JF-Monogramm (ohne Schriftzug) dezent in jeder Karte */
+  .review {
+    position: relative;
+    overflow: hidden;
+  }
+  .review::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    bottom: -10px;
+    width: 80px;
+    height: 110px;
+    background: url('/assets/img/logo-jf.svg') no-repeat center / contain;
+    opacity: 0.12;
+    pointer-events: none;
+  }
+  .review > * {
+    position: relative;
+    z-index: 1;
   }
   .review blockquote {
     margin: 14px 0 22px;
@@ -155,55 +187,12 @@ const mapsUrl = 'https://www.google.com/maps/search/?api=1&query=Goldankauf+%26+
     color: #8a8f95;
     letter-spacing: 0.03em;
   }
-  .reviews-nav {
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-    margin-top: 28px;
-  }
-  .reviews-arrow {
-    box-sizing: border-box;
-    width: 46px;
-    height: 46px;
-    min-width: 0;
-    padding: 0 0 4px;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    border: 1px solid #d8c29d;
-    background: #fff;
-    color: #2b3744;
-    font-size: 28px;
-    line-height: 1;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-  }
-  .reviews-arrow:hover {
-    background: #d8c29d;
-    color: #fff;
-  }
 
   @media (max-width: 899px) {
-    .review { flex-basis: calc((100% - 24px) / 2); }
+    .review { flex-basis: calc((var(--w) - 24px) / 2); }
   }
   @media (max-width: 599px) {
     .reviews { padding: 56px 0; }
-    .review { flex-basis: 88%; }
+    .review { flex-basis: 82vw; }
   }
 </style>
-
-<script>
-  document.querySelectorAll('.reviews-slider').forEach((slider) => {
-    const track = slider.querySelector('.reviews-track');
-    const step = () => (track.querySelector('.review').offsetWidth + 24);
-    slider.querySelector('.prev').addEventListener('click', () => {
-      track.scrollBy({ left: -step() });
-    });
-    slider.querySelector('.next').addEventListener('click', () => {
-      const end = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
-      end ? track.scrollTo({ left: 0 }) : track.scrollBy({ left: step() });
-    });
-  });
-</script>

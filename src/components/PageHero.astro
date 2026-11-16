@@ -1,0 +1,56 @@
+---
+// Seiten-Hero: Titelblock links (mit goldener Linie), Bild rechts, optional Inhalt unter dem Bild (Slot)
+const {
+  kicker,
+  title,
+  text,
+  buttonLabel,
+  buttonHref = '/kontakt',
+  image,
+  imageLabel = '',
+  slides = [],
+} = Astro.props;
+---
+<section id="hero_outer" class="page-hero">
+  <div class="hero-media">
+    <section
+      id="hero"
+      class="blank"
+      data-slides={slides.length ? slides.join(',') : undefined}
+      role="img"
+      aria-label={imageLabel}
+      style={`background-image: url(${image})`}
+    >
+      <div class="content"></div>
+    </section>
+    <slot />
+  </div>
+
+  <section id="hero_content" class="blank">
+    {kicker && <span class="kicker" set:html={kicker} />}
+    <h1>{title}</h1>
+    <p set:html={text} />
+    {buttonLabel && (
+      <a href={buttonHref}>
+        <button>{buttonLabel}</button>
+      </a>
+    )}
+  </section>
+</section>
+
+<style>
+  #hero_outer.page-hero {
+    margin-bottom: 56px;
+  }
+  .hero-media {
+    flex: 0 1 100%;
+    min-width: 0;
+    width: 100%;
+  }
+  .kicker {
+    display: block;
+    color: #b89b63;
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+</style>

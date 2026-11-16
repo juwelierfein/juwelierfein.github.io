@@ -1,144 +1,143 @@
 ---
 import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import RatingBadge from '../components/RatingBadge.astro';
+import ServiceColumns from '../components/ServiceColumns.astro';
+import FeatureCards from '../components/FeatureCards.astro';
+import SplitFeature from '../components/SplitFeature.astro';
+import TextColumns from '../components/TextColumns.astro';
+import SeoTextColumns from '../components/SeoTextColumns.astro';
 import Reviews from '../components/Reviews.astro';
-const mapsUrl = 'https://www.google.com/maps/search/?api=1&query=Goldankauf+%26+Juwelier+Fein+Basilikastra%C3%9Fe+30+55411+Bingen+am+Rhein';
+
+const steps = [
+  {
+    icon: 'fassung',
+    title: 'Fassung und Stil',
+    text: 'Klassischer Solitär, Ring mit Seitensteinen oder ein zurückhaltendes, modernes Design – wir zeigen Ihnen, was zu Ihrer Partnerin oder Ihrem Partner passt.',
+  },
+  {
+    icon: 'metall',
+    title: 'Edelmetall',
+    text: 'Gelbgold, Weißgold, Roségold oder Platin. Die Wahl hängt vom Hautton, vom Schmuck, der bereits getragen wird, und von Ihrem Geschmack ab.',
+  },
+  {
+    icon: 'diamant',
+    title: 'Diamant oder Edelstein',
+    text: 'Beurteilt werden Schliff, Reinheit, Farbe und Karatgewicht. Wir erklären Ihnen die Unterschiede verständlich und helfen Ihnen, ein gutes Verhältnis zwischen Wirkung und Preis zu finden.',
+  },
+  {
+    icon: 'groesse',
+    title: 'Ringgröße',
+    text: 'Sie kennen die Größe nicht, wollen aber nichts verraten? Wir geben Ihnen Tipps, wie Sie sie unauffällig herausfinden. Falls der Ring nicht passt, können wir ihn in der Regel anpassen.',
+  },
+];
+
+const columns = [
+  {
+    image: '/assets/img/verlobungsring-diamant-solitaer-bingen.webp',
+    alt: 'Verlobungsring mit tropfenförmigem Diamant, Verlobungsringe vom Juwelier Fein in Bingen',
+    title: 'Verlobungsring und Trauringe',
+    paragraphs: [
+      'Wenn aus der Verlobung eine Hochzeit wird, begleiten wir Sie auch bei der Wahl Ihrer Eheringe. Entdecken Sie unsere <a href="/produkte/ringe">Trauringe</a> oder gestalten Sie Ihre Ringe direkt im <a href="/trauringkonfigurator">Trauringkonfigurator</a>. So passen Verlobungsring und Trauring später perfekt zusammen.',
+    ],
+  },
+  {
+    image: '/assets/img/goldankauf-juwelier-bingen.webp',
+    alt: 'Persönliche Beratung im Juwelier Fein in Bingen: Schmuck wird mit der Lupe geprüft',
+    title: 'Beratungstermin vereinbaren',
+    paragraphs: [
+      'Kommen Sie einfach in unserem Geschäft in der Basilikastraße 30 in Bingen am Rhein vorbei oder <a href="/kontakt">vereinbaren Sie online einen Termin</a>. Wir freuen uns darauf, gemeinsam mit Ihnen den passenden Verlobungsring zu finden.',
+      'Ihr Team des <a href="/">Juwelier Fein in Bingen</a>.',
+    ],
+  },
+];
+
+const seoColumns = [
+  {
+    blocks: [
+      {
+        title: 'Verlobungsring kaufen in Bingen',
+        paragraphs: [
+          'Sie suchen einen Verlobungsring in Bingen? Bei Juwelier Fein in der Basilikastraße 30 finden Sie Ringe für den schönsten Antrag, von klassisch bis modern. Seit fast 140 Jahren steht unser Haus für persönliche Beratung und gutes Handwerk, und wir führen diese Tradition im gleichen Sinne weiter.',
+          'Ein Verlobungsring ist mehr als Schmuck: Er begleitet Sie ein Leben lang. Deshalb nehmen wir uns Zeit, hören zu und zeigen Ihnen Ringe, die zu Ihrer Partnerin oder Ihrem Partner, zum Alltag und zu Ihrem Budget passen. Ob Solitärring mit einem einzelnen Diamanten, Ring mit Seitensteinen oder ein Modell mit farbigem Edelstein, wir beraten Sie ehrlich und ohne Kaufdruck.',
+        ],
+      },
+      {
+        title: 'Verlobungsring und Trauring: der Unterschied',
+        paragraphs: [
+          'Der Verlobungsring wird traditionell beim Heiratsantrag überreicht, der Trauring beim Ja-Wort. Viele Paare tragen den Verlobungsring nach der Hochzeit zusammen mit dem Ehering weiter. Damit beide Ringe harmonisch zusammenwirken, beraten wir Sie gerne zu beidem. Mehr dazu finden Sie bei unseren <a href="/produkte/ringe">Trauringen</a> und im <a href="/trauringkonfigurator">Trauringkonfigurator</a>.',
+        ],
+      },
+    ],
+  },
+  {
+    blocks: [
+      {
+        title: 'Ringgröße bestimmen und Ring anpassen',
+        paragraphs: [
+          'Die richtige Ringgröße ist wichtig, damit der Ring bequem sitzt. Wenn der Antrag eine Überraschung bleiben soll, hilft oft ein Ring, den Ihre Partnerin oder Ihr Partner bereits trägt. Wir messen ihn genau aus. Sitzt der Verlobungsring nach dem Antrag nicht perfekt, kann er in der Regel angepasst werden. Auch Reparaturen und Gravuren erledigen wir für Sie.',
+        ],
+      },
+      {
+        title: 'Gold, Platin und Diamanten',
+        paragraphs: [
+          'Verlobungsringe gibt es in Gelbgold, Weißgold, Roségold und Platin. Bei Diamanten und Edelsteinen sind Schliff, Reinheit, Farbe und Karatgewicht die entscheidenden Merkmale. Wir erklären Ihnen diese Kriterien verständlich und zeigen Ihnen am Stück, worauf es ankommt.',
+        ],
+      },
+      {
+        title: 'Verlobungsringe für Bingen und die Region',
+        paragraphs: [
+          'Unser Geschäft liegt in der Basilikastraße, ganz in der Nähe der Burg Klopp. Rund um das Geschäft sind viele Parkplätze verfügbar. Gäste aus Ingelheim, Rüdesheim, Bad Kreuznach, Mainz und Wiesbaden sind uns genauso willkommen wie Paare aus Bingen. <a href="/kontakt">Vereinbaren Sie jetzt Ihren Beratungstermin</a>, wir freuen uns auf Sie.',
+        ],
+      },
+    ],
+  },
+];
 ---
 <Base
   title="Verlobungsring in Bingen kaufen - Juwelier Fein"
   description="Verlobungsringe in Bingen am Rhein: Persönliche Beratung zu Diamantringen, Fassungen und Größe bei Juwelier Fein in der Basilikastraße."
 >
-  <section id="hero_outer">
-    <div class="vr-pic">
-      <section
-        id="hero"
-        class="blank"
-        role="img"
-        aria-label="Beratung im Juwelier Fein in Bingen: Schmuckprüfung mit Lupe und Waage"
-        style="background-image: url(/assets/img/verlobungsring-beratung-juwelier-bingen.webp)"
-      >
-        <div class="content"></div>
-      </section>
-      <a class="vr-rating" href={mapsUrl} target="_blank" rel="noopener">
-        <svg viewBox="0 0 48 48" width="26" height="26" aria-hidden="true">
-        <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
-        <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
-        <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
-        <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
-      </svg>
-        <strong>5,0</strong>
-        <span class="vr-stars" aria-hidden="true">★★★★★</span>
-        <span class="vr-label">Hervorragend &middot; 93 Google-Rezensionen</span>
-      </a>
-    </div>
+  <PageHero
+    kicker="Verlobungsringe in Bingen &ndash; persönlich &amp; individuell"
+    title="Verlobungsring in Bingen"
+    text="Der Antrag ist einer der schönsten Momente im Leben, und der Verlobungsring macht ihn unvergesslich. Bei Juwelier Fein nehmen wir uns Zeit für Sie, zeigen Ihnen verschiedene Modelle und beantworten alle Ihre Fragen &ndash; ohne Kaufdruck."
+    buttonLabel="Termin vereinbaren"
+    buttonHref="/kontakt"
+    image="/assets/img/verlobungsring-antrag-ring-anstecken-bingen.webp"
+    imageLabel="Verlobungsring wird bei der Trauung angesteckt, Verlobungsringe vom Juwelier Fein in Bingen"
+    slides={[
+      '/assets/img/goldene-eheringe-seide-juwelier-bingen.webp',
+      '/assets/img/goldankauf-juwelier-bingen.webp',
+      '/assets/img/verlobungsring-antrag-ring-anstecken-bingen.webp',
+    ]}
+  >
+    <RatingBadge />
+  </PageHero>
 
-    <section id="hero_content" class="blank">
-      <span class="vr-kicker">Verlobungsringe in Bingen &ndash; persönlich &amp; individuell</span>
-      <h1>Verlobungsring in Bingen</h1>
-      <p>
-        Der Antrag ist einer der schönsten Momente im Leben, und der
-        Verlobungsring macht ihn unvergesslich. Bei Juwelier Fein nehmen wir uns
-        Zeit für Sie, zeigen Ihnen verschiedene Modelle und beantworten alle
-        Ihre Fragen &ndash; ohne Kaufdruck.
-      </p>
-      <a href="/kontakt">
-        <button>Termin vereinbaren</button>
-      </a>
-    </section>
-  </section>
+  <ServiceColumns tinted />
 
-  <div id="services">
-    <div class="wrapper">
+  <FeatureCards
+    titleBefore="Was beim Kauf eines"
+    titleHighlight="Verlobungsrings"
+    titleAfter="wichtig ist"
+    intro="Vier Punkte, an denen Sie sich orientieren können. Zu jedem einzelnen beraten wir Sie gerne persönlich in unserem Geschäft in Bingen."
+    items={steps}
+  />
 
-      <div class="services">
-      <div class="service">
-        <img src="/assets/img/1.svg" alt="img" class="slide-in" height="50px">
-        <h3>Einfach kontaktieren</h3>
-        <p>Schreiben Sie uns jederzeit. Wir sind Montag bis Freitag vor Ort erreichbar. Einfach anrufen unter der: 06721 3087840</p>
-      </div>
-   
+  <SplitFeature
+    kicker="Individuell &amp; persönlich"
+    title="Individuelle Wünsche"
+    text="Sie haben eine besondere Idee, möchten einen vorhandenen Stein neu fassen lassen oder wünschen eine persönliche Gravur? Sprechen Sie uns an. Gerne besprechen wir mit Ihnen, was möglich ist. Auch bei Schmuck und Uhren steht Ihnen unser Reparatur-Service zur Seite."
+    image="/assets/img/goldene-eheringe-seide-juwelier-bingen.webp"
+    alt="Zwei goldene Eheringe auf Seide mit weißen Blumen, Trauringe vom Juwelier Fein in Bingen"
+    linkLabel="Beratungstermin vereinbaren"
+    linkHref="/kontakt"
+  />
 
-    <div class="service">
-      <img src="/assets/img/2.svg" alt="" class="slide-in" height="50px">
-      <h3>Hochwertige Produkte</h3>
-      <p>Unsere Produkte verfügen alle über eine tolle Qualität. Jedes Schmuckstück wird einer umfassender Qualitätskontrolle unterzogen.</p>
-    </div>
- 
+  <TextColumns items={columns} />
 
-  <div class="service">
-    <img src="/assets/img/3.svg" alt="" class="slide-in" height="50px">
-    <h3>Schnelle Abwicklung</h3>
-    <p>Sobald Sie telefonisch oder vor Ort bestellen, legen wir sofort mit der
-      Abwicklung los. Sie erhalten sofort eine Bestellbestätigung mit allen weiteren Informationen.</p>
-  </div>
-  </div>
-
-    </div>
-  </div>
-
-  <section id="text">
-    <div class="wrapper blank">
-      <h3>Was beim Kauf eines Verlobungsrings wichtig ist</h3>
-      <ul>
-        <li><strong>Fassung und Stil:</strong> Klassischer Solitär, Ring mit Seitensteinen oder ein zurückhaltendes, modernes Design &ndash; wir zeigen Ihnen, was zu Ihrer Partnerin oder Ihrem Partner passt.</li>
-        <li><strong>Edelmetall:</strong> Gelbgold, Weißgold, Roségold oder Platin. Die Wahl hängt vom Hautton, vom Schmuck, der bereits getragen wird, und von Ihrem Geschmack ab.</li>
-        <li><strong>Diamant oder Edelstein:</strong> Beurteilt werden Schliff, Reinheit, Farbe und Karatgewicht. Wir erklären Ihnen die Unterschiede verständlich und helfen Ihnen, ein gutes Verhältnis zwischen Wirkung und Preis zu finden.</li>
-        <li><strong>Ringgröße:</strong> Sie kennen die Größe nicht, wollen aber nichts verraten? Wir geben Ihnen Tipps, wie Sie sie unauffällig herausfinden. Falls der Ring nicht passt, können wir ihn in der Regel anpassen.</li>
-      </ul>
-
-      <h3>Individuelle Wünsche</h3>
-      <p>Sie haben eine besondere Idee, möchten einen vorhandenen Stein neu fassen lassen oder wünschen eine persönliche Gravur? Sprechen Sie uns an. Gerne besprechen wir mit Ihnen, was möglich ist. Auch bei Schmuck und Uhren steht Ihnen unser Reparatur-Service zur Seite.</p>
-
-      <h3>Verlobungsring und Trauringe</h3>
-      <p>Wenn aus der Verlobung eine Hochzeit wird, begleiten wir Sie auch bei der Wahl Ihrer Eheringe. Entdecken Sie unsere <a href="/produkte/ringe">Trauringe</a> oder gestalten Sie Ihre Ringe direkt im <a href="/trauringkonfigurator">Trauringkonfigurator</a>. So passen Verlobungsring und Trauring später perfekt zusammen.</p>
-
-      <h3>Beratungstermin vereinbaren</h3>
-      <p>Kommen Sie einfach in unserem Geschäft in der Basilikastraße 30 in Bingen am Rhein vorbei oder <a href="/kontakt">vereinbaren Sie online einen Termin</a>. Wir freuen uns darauf, gemeinsam mit Ihnen den passenden Verlobungsring zu finden.</p>
-      <p>Ihr Team des <a href="/">Juwelier Fein in Bingen</a>.</p>
-    </div>
-  </section>
+  <SeoTextColumns columns={seoColumns} />
 
   <Reviews />
 </Base>
-
-<style>
-  #hero_outer {
-    margin-bottom: 56px;
-  }
-  #services {
-    background: #faf7f2;
-    border-top: 1px solid #efe6d6;
-    border-bottom: 1px solid #efe6d6;
-  }
-  .vr-pic {
-    flex: 0 1 100%;
-    min-width: 0;
-    width: 100%;
-  }
-  .vr-kicker {
-    display: block;
-    color: #b89b63;
-    font-size: 16px;
-    margin-bottom: 14px;
-  }
-  .vr-rating {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 18px;
-    color: #2b3744;
-    text-decoration: none;
-  }
-  .vr-rating strong {
-    font-size: 22px;
-  }
-  .vr-stars {
-    color: #e6b422;
-    letter-spacing: 2px;
-  }
-  .vr-label {
-    color: #6b7580;
-    font-size: 14px;
-  }
-</style>

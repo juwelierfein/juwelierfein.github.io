@@ -1,0 +1,29 @@
+---
+// Drei Service-Spalten mit Icon, Titel und Text (optional mit Überschrift/Einleitung und Hintergrundband)
+import { defaultServices } from '../data/site';
+const { heading, intro, items = defaultServices, tinted = false } = Astro.props;
+---
+<div id="services" class:list={{ tinted }}>
+  <div class="wrapper">
+    {heading && <h2>{heading}</h2>}
+    {intro && <p>{intro}</p>}
+
+    <div class="services">
+      {items.map((item) => (
+        <div class="service">
+          <img src={item.icon} alt="" class="slide-in" height="50px" />
+          <h3>{item.title}</h3>
+          <p>{item.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<style>
+  .tinted {
+    background: #faf7f2;
+    border-top: 1px solid #efe6d6;
+    border-bottom: 1px solid #efe6d6;
+  }
+</style>

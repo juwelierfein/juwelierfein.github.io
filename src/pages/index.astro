@@ -1,6 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
 import Reviews from '../components/Reviews.astro';
+import ServiceColumns from '../components/ServiceColumns.astro';
+import ContactBanner from '../components/ContactBanner.astro';
+import TextColumns from '../components/TextColumns.astro';
 ---
 <Base title="Ihr Juwelier Fein aus Bingen - Juwelier Bingen" description="Juwelier Fein in Bingen am Rhein: Trauringe, Uhren, Goldschmuck sowie Goldankauf. Seit fast 140 Jahren Ihr Juwelier in der Basilikastraße.">
 
@@ -31,11 +34,13 @@ import Reviews from '../components/Reviews.astro';
     <div class="wrapper">
       <h2>Juwelier aus Tradition</h2>
 
-      <h3>Wo in Bingen finden Sie uns?</h3>
+      <h3>Wo finden Sie unseren Juwelier in Bingen?</h3>
 
-      <p>Unser Geschäft befindet sich in der Basilikastraße 30 ganz in der Nähe der Burg Klopp. Rund um unser Geschäft sind viele Parkplätze verfügbar.</p>
+      <p>Unser Juweliergeschäft befindet sich in der Basilikastraße 30 in Bingen am Rhein, nur wenige Gehminuten von der bekannten Burg Klopp entfernt. Dank unserer zentralen Lage sind wir sowohl für Kunden aus Bingen als auch aus der näheren Umgebung gut erreichbar.</p>
 
-      
+      <p>Wenn Sie uns mit dem Auto besuchen, stehen Ihnen rund um unser Geschäft zahlreiche Parkmöglichkeiten zur Verfügung. So können Sie Ihren Besuch bei uns ganz entspannt planen.</p>
+
+      <p>Wir freuen uns darauf, Sie persönlich in unserem Geschäft begrüßen zu dürfen. Besuchen Sie uns und entdecken Sie unser Angebot sowie unseren persönlichen Service rund um Schmuck und Uhren.</p>
     </div>
   </section>
   </div>
@@ -45,7 +50,7 @@ import Reviews from '../components/Reviews.astro';
 
    <a href="/produkte/uhren">
     <div class="row_img">
-    <img src="/assets/img/ehering-anstecken-hochzeit-bingen.webp" alt="">
+    <img src="/assets/img/verlobungsring-antrag-ring-anstecken-bingen.webp" alt="">
     <div class="row_img_content">
       <h3>Uhren</h3>
     </div>
@@ -55,7 +60,7 @@ import Reviews from '../components/Reviews.astro';
 
     <a href="/produkte/ringe">
     <div class="row_img">
-    <img src="/assets/img/trauringe-gold-juwelier-bingen.webp" alt="">
+    <img src="/assets/img/goldene-eheringe-seide-juwelier-bingen.webp" alt="">
     <div class="row_img_content">
       <h3>Trauringe</h3>
     </div>
@@ -78,87 +83,37 @@ import Reviews from '../components/Reviews.astro';
 
   <Reviews />
 
-  <section id="text">
-    <div class="wrapper">
-
-      <h2>Verlobungsringe von Gerstner</h2>
-
-      <p>Hier ist das Neueste aus unseren feinen Schmuck-Kollektionen! 
-        Diese Ringe aus Gold, Roségold und Sterlingsilber mit Opalen, 
-        Mondsteinen und einer Reihe anderer schillernder Edelsteine sind perfekt für 
-        besondere Anlässe und den Alltag.</p>
-
-
-      <p>Wir hier bei Juwelier Bingen bemühen uns, Ihnen die höchste Qualität und die neuesten 
-        Trends in internatiolem Schmuck zu den besten Preisen in Bingen anzubieten.
-        Designer-Schmuck - Designer-Uhrenlinien - Diamant-Verlobungsringe - 
-        Lose Diamanten & Edelsteine - Völlig individuelle Design-Optionen. 
-        Voller Schmuck und Uhren-Reparatur-Service!</p>
-    </div>
-  </section>
-
-
-  <section id="two_images">
- 
-      <div class="fist_left_img">
-        <img src="/assets/img/juwelier_bingen_1.png" alt="" class="slide-in">
-      </div>
-
-      <div class="first_right_img">
-        <img src="/assets/img/juwelier_bingen_2.png" alt="" class="slide-in">
-      </div>
-
-  </section>
+  <TextColumns
+    items={[
+      {
+        image: '/assets/img/juwelier_bingen_1.png',
+        alt: 'Brautpaar mit Trauringen von Gerstner, Verlobungsringe und Trauringe beim Juwelier Fein in Bingen',
+        title: 'Verlobungsringe von Gerstner',
+        paragraphs: [
+          'Hier ist das Neueste aus unseren feinen Schmuck-Kollektionen! Diese Ringe aus Gold, Roségold und Sterlingsilber mit Opalen, Mondsteinen und einer Reihe anderer schillernder Edelsteine sind perfekt für besondere Anlässe und den Alltag.',
+        ],
+      },
+      {
+        image: '/assets/img/juwelier_bingen_2.png',
+        alt: 'Brautpaar im Park, Gerstner Eheringe vom Juwelier Fein in Bingen',
+        title: 'Qualität und Auswahl in Bingen',
+        paragraphs: [
+          'Wir hier bei Juwelier Bingen bemühen uns, Ihnen die höchste Qualität und die neuesten Trends in internatiolem Schmuck zu den besten Preisen in Bingen anzubieten. Designer-Schmuck - Designer-Uhrenlinien - Diamant-Verlobungsringe - Lose Diamanten &amp; Edelsteine - Völlig individuelle Design-Optionen. Voller Schmuck und Uhren-Reparatur-Service!',
+        ],
+      },
+    ]}
+  />
 
 
-  <div id="services">
-    <div class="wrapper">
 
-      <h2>Unser Service für Bingen</h2>
-
-      <p>Unser Service besteht nicht nur aus dem einfachen Verkauf. Wir bieten Ihnen 
-        eine umfassende Beratung rund um Ihre Lieblingsschmuckstücke.
-      </p>
-  
-      <div class="services">
-      <div class="service">
-        <img src="/assets/img/1.svg" alt="img" class="slide-in" height="50px">
-        <h3>Einfach kontaktieren</h3>
-        <p>Schreiben Sie uns jederzeit. Wir sind Montag bis Freitag vor Ort erreichbar. Einfach anrufen unter der: 06721 3087840</p>
-      </div>
-   
-
-    <div class="service">
-      <img src="/assets/img/2.svg" alt="" class="slide-in" height="50px">
-      <h3>Hochwertige Produkte</h3>
-      <p>Unsere Produkte verfügen alle über eine tolle Qualität. Jedes Schmuckstück wird einer umfassender Qualitätskontrolle unterzogen.</p>
-    </div>
- 
-
-  <div class="service">
-    <img src="/assets/img/3.svg" alt="" class="slide-in" height="50px">
-    <h3>Schnelle Abwicklung</h3>
-    <p>Sobald Sie telefonisch oder vor Ort bestellen, legen wir sofort mit der
-      Abwicklung los. Sie erhalten sofort eine Bestellbestätigung mit allen weiteren Informationen.</p>
-  </div>
-  </div>
-
-</div>
-
-  </div>
+  <ServiceColumns
+    heading="Unser Service für Bingen"
+    intro="Unser Service besteht nicht nur aus dem einfachen Verkauf. Wir bieten Ihnen eine umfassende Beratung rund um Ihre Lieblingsschmuckstücke."
+    tinted
+  />
 
 
-  <section id="one_image">
-    <div class="wrapper">
-      <div class="content">
-      <p>Buchen Sie jetzt einen 
-        Termin bei uns.</p>
-        <a href="/kontakt">
-      <button>Kontaktieren</button>
-        </a>
-    </div>
-   </div>
-  </section>
+  <ContactBanner />
 
 
   <section id="uber">

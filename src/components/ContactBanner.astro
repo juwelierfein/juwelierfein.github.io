@@ -1,0 +1,63 @@
+---
+// Kontaktbanner: Bild in voller Breite (100%) mit Text und Button unten links
+const {
+  text = 'Buchen Sie jetzt einen Termin bei uns.',
+  buttonLabel = 'Kontaktieren',
+  buttonHref = '/kontakt',
+  image = '/assets/img/diamant-ring-banner-juwelier-bingen.webp',
+} = Astro.props;
+---
+<section class="contact-banner" style={`background-image: url(${image})`}>
+  <div class="content">
+    <p>{text}</p>
+    <a href={buttonHref}>
+      <button>{buttonLabel}</button>
+    </a>
+  </div>
+</section>
+
+<style>
+  .contact-banner {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 550px;
+    background-position: center;
+    background-size: cover;
+  }
+  /* dunkler Verlauf unten, damit der weiße Text immer lesbar ist */
+  .contact-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0) 65%);
+  }
+  .content {
+    z-index: 1;
+    position: absolute;
+    bottom: 4%;
+    left: 4%;
+    width: 60%;
+  }
+  .content p {
+    margin: 0 0 8px;
+    color: #fff;
+    font-size: 32px;
+    line-height: 36px;
+  }
+</style>
+
+<style>
+  @media (max-width: 599px) {
+    .contact-banner {
+      height: 380px;
+    }
+    .content {
+      width: 90%;
+    }
+    .content p {
+      font-size: 26px;
+      line-height: 30px;
+    }
+  }
+</style>
