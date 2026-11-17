@@ -64,15 +64,21 @@ Auf der Seite „Trauring-Konfigurator“ binden wir den Konfigurator unseres Pa
 
 Die Einbindung erfolgt auf Grundlage unseres berechtigten Interesses an einer ansprechenden Darstellung unseres Angebots (Art. 6 Abs. 1 lit. f DSGVO). Informationen zum Umgang mit Ihren Daten finden Sie in der [Datenschutzerklärung von Saint Maurice](https://www.saintmaurice.de/datenschutz).
 
-## 7. Links zu sozialen Netzwerken
+## 7. Online-Shop (Breuning)
+
+Über den Link „Shop“ in der Kopfzeile unserer Website gelangen Sie zu unserem Online-Shop unter shop.juwelier-fein.shop. Der Shop wird technisch von unserem Partner Breuning (Breuning GmbH &amp; Co. KG, Pforzheim) betrieben und ist eine eigenständige Website. Beim Aufruf des Shops, bei der Registrierung, beim Bestellvorgang und bei der Zahlung verarbeitet Breuning Ihre Daten (zum Beispiel IP-Adresse, Kontakt- und Adressdaten, Bestell- und Zahlungsdaten) und setzt dabei technisch notwendige Cookies ein. Auf diese Datenverarbeitung haben wir keinen Einfluss. Bis zum Anklicken des Links werden keine Daten an den Shop übermittelt.
+
+Soweit Sie im Shop bestellen, erfolgt die Verarbeitung zur Erfüllung des Kaufvertrags (Art. 6 Abs. 1 lit. b DSGVO). Informationen zum Umgang mit Ihren Daten finden Sie in der [Datenschutzerklärung von Breuning](https://www.breuning.de/datenschutz) sowie in den Hinweisen im Shop selbst.
+
+## 8. Links zu sozialen Netzwerken
 
 Auf unserer Website verlinken wir auf unser Profil bei Instagram. Es handelt sich lediglich um einen Link, es werden keine Plugins eingebunden. Erst wenn Sie den Link anklicken, werden Daten an Instagram (Meta Platforms Ireland Limited, Merrion Road, Dublin 4, Irland) übermittelt. Informationen dazu finden Sie in der [Datenschutzrichtlinie von Instagram](https://help.instagram.com/519522125107875).
 
-## 8. Schriftarten
+## 9. Schriftarten
 
 Die auf dieser Website verwendeten Schriftarten werden lokal von unserem Server bereitgestellt. Es findet keine Verbindung zu Schriftarten-Servern Dritter (z. B. Google Fonts) statt.
 
-## 9. Ihre Rechte
+## 10. Ihre Rechte
 
 Ihnen stehen gegenüber uns als Verantwortlichem folgende Rechte zu:
 
@@ -88,7 +94,7 @@ Ihnen stehen gegenüber uns als Verantwortlichem folgende Rechte zu:
 
 Zur Ausübung Ihrer Rechte genügt eine formlose Mitteilung an die oben genannten Kontaktdaten.
 
-## 10. Beschwerderecht bei einer Aufsichtsbehörde
+## 11. Beschwerderecht bei einer Aufsichtsbehörde
 
 Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren (Art. 77 DSGVO). Zuständig für uns ist:
 
@@ -96,6 +102,6 @@ Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Rheinlan
 Hintere Bleiche 34, 55116 Mainz  
 [www.datenschutz.rlp.de](https://www.datenschutz.rlp.de)
 
-## 11. Aktualität dieser Erklärung
+## 12. Aktualität dieser Erklärung
 
 Diese Datenschutzerklärung hat den Stand November 2026. Wenn wir unsere Website ändern oder neue Dienste einbinden, passen wir sie entsprechend an.

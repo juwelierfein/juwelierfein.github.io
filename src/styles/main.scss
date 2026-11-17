@@ -1101,3 +1101,8 @@ input[type=email],
   margin-top: 0;
   margin-bottom: 0;
 }
+
+/* nicht verlinkte Kacheln (Uhren, Goldschmuck) */
+.row_link .row_img {
+  cursor: default;
+}
