@@ -1,0 +1,100 @@
+---
+interface Props {
+  kicker?: string;
+  title?: string;
+  text?: string;
+}
+const {
+  kicker = 'Unsere Auswahl',
+  title = 'Trauringe in Gold, Weißgold & Roségold',
+  text = 'Ein kleiner Einblick in unsere Kollektion. Die ganze Auswahl zeigen wir Ihnen gern bei einem Besuch in Bingen.',
+} = Astro.props;
+const count = 14;
+const rings = Array.from({ length: count }, (_, i) => `/assets/img/trauringe/trauringe-juwelier-bingen-${String(i + 1).padStart(2, '0')}.webp`);
+---
+<section class="rings" aria-label="Ringe aus unserer Kollektion">
+  <div class="rings-head">
+    <span class="rings-kicker">{kicker}</span>
+    <h2>{title}</h2>
+    <p>{text}</p>
+  </div>
+
+  <div class="rings-slider">
+    <div class="rings-belt">
+      {[0, 1].map((copy) => (
+        rings.map((src) => (
+          <div class="ring" aria-hidden={copy === 1 ? 'true' : undefined}>
+            <img src={src} alt={copy === 1 ? '' : 'Trauringe aus der Kollektion von Juwelier Fein in Bingen'} width="800" height="667" loading="lazy" decoding="async" />
+          </div>
+        ))
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .rings {
+    padding: 80px 0;
+    background: #fff;
+  }
+  .rings-head {
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto 36px;
+  }
+  .rings-kicker {
+    display: block;
+    font-family: Baskerville;
+    color: #b89b63;
+    margin-bottom: 4px;
+  }
+  .rings-head h2 {
+    padding: 0;
+  }
+  .rings-head h2::before {
+    display: none;
+  }
+  .rings-head p {
+    margin: 8px auto 0;
+    max-width: 640px;
+  }
+  .rings-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  }
+  .rings-belt {
+    display: flex;
+    width: max-content;
+    animation: rings-marquee 80s linear infinite;
+    will-change: transform;
+  }
+  .rings-slider:hover .rings-belt {
+    animation-play-state: paused;
+  }
+  @keyframes rings-marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .rings-slider { overflow-x: auto; }
+    .rings-belt { animation: none; }
+  }
+  .ring {
+    flex: 0 0 clamp(130px, 13vw, 190px);
+    margin-right: 24px;
+  }
+  .ring img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 6 / 5;
+    object-fit: contain;
+  }
+  @media (max-width: 599px) {
+    .rings { padding: 56px 0; }
+    .ring { flex-basis: 34vw; margin-right: 16px; }
+  }
+</style>
