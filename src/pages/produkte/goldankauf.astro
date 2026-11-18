@@ -1,0 +1,77 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import RatingBadge from '../../components/RatingBadge.astro';
+---
+<Base
+  title="Goldankauf Bingen - Juwelier Bingen"
+  description=""
+>
+  <PageHero
+    kicker="Goldankauf in Bingen &ndash; fair &amp; persönlich"
+    title="Goldankauf Bingen"
+    text="Sie besitzen alten Schmuck, den Sie geerbt haben oder einfach nicht mehr tragen? Haben Sie seit Ihrem letzten Zahnarztbesuch Dentalgold und wissen nicht, was Sie damit anfangen können? Wir sind hier Ihr persönlicher Ansprechpartner und helfen Ihnen gerne weiter."
+    buttonLabel="Kontaktieren"
+    buttonHref="/kontakt"
+    image="/assets/img/goldankauf-altgold-ringe-bingen.webp"
+    imageLabel="Goldringe, Ketten und Feingold auf einer Werkbank, Goldankauf beim Juwelier Fein in Bingen"
+  >
+    <RatingBadge />
+  </PageHero>
+
+  <section id="text">
+    <div class="wrapper blank">
+      <img class="text-float" src="/assets/img/altgold-schmuck-goldankauf-bingen.webp" alt="Kiste mit Altgold-Schmuck: Ketten, Ringe, Armbänder und Münzen, Goldankauf beim Juwelier Fein in Bingen" width="320" height="213" loading="lazy" />
+
+      <p>Der Goldankauf läuft in der Regel wie folgt ab:</p>
+
+      <p>Sie bringen Ihr Gold, wie z. B. Schmuck, Münzen oder Barren, zu uns.</p>
+
+      <p>Wir wiegen das Gold und bestimmen den Goldgehalt mittels Strichprobe (*weitere Informationen hierzu weiter unten).</p>
+
+      <p>Wir geben Ihnen ein Angebot für den Ankauf des Goldes, basierend auf dem aktuellen Goldpreis und dem Gewicht des Goldes.</p>
+
+      <p>Sie entscheiden, ob Sie das Angebot annehmen möchten.</p>
+
+      <p>Wenn Sie das Angebot annehmen, erhalten Sie den vereinbarten Preis unverzüglich in bar oder in einer anderen vereinbarten Form, z. B. einer Überweisung.</p>
+
+      <p>In der Regel wird das gekaufte Gold eingeschmolzen und weiterverkauft.</p>
+
+      <p>Bei einem Goldankauf kann man folgende Gegenstände abgeben:</p>
+
+      <ul>
+        <li>Schmuck: Goldringe, Ohrringe, Halsketten, Armbänder und andere Schmuckstücke aus Gold,</li>
+        <li>Münzen: Goldmünzen, die als Sammlerstücke oder Anlagemünzen gekauft wurden,</li>
+        <li>Barren: Goldbarren in verschiedenen Größen und Gewichten,</li>
+        <li>Dentalgold: Goldfüllungen, Kronen und Brücken aus Gold,</li>
+        <li>Elektronik: Goldgehäuse von Elektronikgeräten wie Smartphones, Tablets und Laptops,</li>
+        <li>Andere Gegenstände: Goldbesteck, Goldmedaillen, Zahngold und andere Gegenstände/Schmuckstücke, die aus Gold, Silber, Platin oder Palladium bestehen.</li>
+      </ul>
+
+      <h3>Die Feingehaltsbestimmung mittels Strichprobe:</h3>
+
+      <p>Die Feingehaltsbestimmung mittels Strichprobe beinhaltet das Entnehmen einer Probe von einem Schmuckstück und die Überprüfung des Feingehalts durch den Einsatz von Säuren. Der Abrieb des Schmuckstücks wird auf einen Prüfstein aufgetragen und dann mittels Säuren auf den Feingehalt getestet. Wenn sich der Abrieb unter der Säure nicht oder nur gering verändert, bedeutet dies ein positives Ergebnis. Wenn der Abrieb sich auflöst, weist dies auf einen niedrigeren Feingehalt oder darauf hin, dass das Stück aus einem unedlen Metall besteht. Diese Methode ist allerdings nur für die Feingehalte 333 ‰ / 585 ‰ / 750 ‰ und 900 ‰ genau. In speziellen Fällen wird eine umfangreiche Röntgenfluoreszenzanalyse (RFA) des Altgoldes vorgenommen.</p>
+
+      <p>Haben Sie noch Fragen? Zögern Sie nicht, uns anzurufen oder eine Mail zu schreiben – wir freuen uns auf Ihren Besuch!</p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .text-float {
+    float: right;
+    width: 320px;
+    max-width: 45%;
+    height: auto;
+    margin: 6px 0 24px 32px;
+  }
+  @media (max-width: 600px) {
+    .text-float {
+      float: none;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      margin: 0 0 24px;
+    }
+  }
+</style>
