@@ -4,7 +4,7 @@ document.querySelector('.notification > p')?.classList.add('open');
 // Hero-Hintergrund wechseln
 // Bilder werden vorab geladen und sanft überblendet (kein weißes Blinken)
 const hero = document.querySelector('#hero');
-if (hero) {
+if (hero && !hero.dataset.video) {
   const initial = (hero.style.backgroundImage.match(/url\(["']?([^"')]+)["']?\)/) || [])[1];
   const others = hero.dataset.slides
     ? hero.dataset.slides.split(',')

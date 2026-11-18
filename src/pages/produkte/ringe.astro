@@ -1,0 +1,35 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import RatingBadge from '../../components/RatingBadge.astro';
+import RingSlider from '../../components/RingSlider.astro';
+import SplitFeature from '../../components/SplitFeature.astro';
+---
+<Base
+  title="Trauringe in Bingen kaufen - Juwelier Bingen"
+  description="Trauringe in Bingen am Rhein kaufen."
+>
+  <PageHero
+    kicker="Trauringe in Bingen &ndash; persönlich &amp; individuell"
+    title="Trauringe in Bingen kaufen"
+    text="Es gibt nichts Wertbeständigeres auf der Welt als die Liebe. Wenn sich ein Paar dazu entscheidet, diese Liebe durch das Ja-Wort zu besiegeln, gehört das Symbol der Liebe dazu. Trauringe sollten dabei sorgfältig ausgewählt werden. Dafür stehen wir Ihnen beratend zur Seite."
+    buttonLabel="Termin vereinbaren"
+    buttonHref="/kontakt"
+    image="/assets/img/brautpaar-hochzeit-trauringe-bingen.webp"
+    imageLabel="Brautpaar auf der Treppe nach der Trauung, Trauringe vom Juwelier Fein in Bingen"
+  >
+    <RatingBadge />
+  </PageHero>
+
+  <RingSlider />
+
+  <SplitFeature
+    kicker="Gerstner, Saint Maurice &amp; Rubin"
+    title="Ihr individueller Trau(m)ring"
+    text={`Von der Legierung über das Design bis hin zu Sonderwünschen, konfigurieren wir Ihnen gerne Ihren individuellen Trau(m)ring. Dafür nehmen wir uns so viel Zeit, wie Sie benötigen, denn Ihre Zufriedenheit liegt uns am Herzen. Buchen Sie sich gerne einen Termin in unserem Haus. Unsere führenden Trauringpartner sind die Qualitätsfirmen Gerstner, Saint Maurice und Rubin.<br><br>Für einen guten Start in das gemeinsame Glück &ndash; Ihr Team des <a href="/">Juwelier Fein in Bingen</a>.`}
+    image="/assets/img/trauringe-gerstner-etui-bingen.webp"
+    alt="Goldene Trauringe von Gerstner im weißen Etui, Trauringe vom Juwelier Fein in Bingen"
+    linkLabel="Beratungstermin vereinbaren"
+    linkHref="/kontakt"
+  />
+</Base>

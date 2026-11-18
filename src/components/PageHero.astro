@@ -9,6 +9,8 @@ const {
   image,
   imageLabel = '',
   slides = [],
+  video = '',
+  poster = '',
   divider = true,
 } = Astro.props;
 ---
@@ -18,10 +20,14 @@ const {
       id="hero"
       class="blank"
       data-slides={slides.length ? slides.join(',') : undefined}
+      data-video={video ? 'true' : undefined}
       role="img"
       aria-label={imageLabel}
       style={`background-image: url(${image})`}
     >
+      {video && (
+        <video class="hero-video" src={video} poster={poster || undefined} autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+      )}
       <div class="content"></div>
     </section>
     <slot />
@@ -55,6 +61,14 @@ const {
     flex: 0 1 100%;
     min-width: 0;
     width: 100%;
+  }
+  .hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
   .kicker {
     display: block;
