@@ -2,10 +2,92 @@
 import Base from '../../layouts/Base.astro';
 import PageHero from '../../components/PageHero.astro';
 import RatingBadge from '../../components/RatingBadge.astro';
+import ServiceColumns from '../../components/ServiceColumns.astro';
+import FeatureCards from '../../components/FeatureCards.astro';
+import SplitFeature from '../../components/SplitFeature.astro';
+import TextColumns from '../../components/TextColumns.astro';
+import SeoTextColumns from '../../components/SeoTextColumns.astro';
+import Reviews from '../../components/Reviews.astro';
+
+const steps = [
+  {
+    icon: 'bringen',
+    title: 'Gold mitbringen',
+    text: 'Sie bringen Ihr Gold, wie z. B. Schmuck, Münzen oder Barren, zu uns in die Basilikastraße 30 in Bingen.',
+  },
+  {
+    icon: 'waage',
+    title: 'Wiegen und prüfen',
+    text: 'Wir wiegen das Gold und bestimmen den Goldgehalt mittels Strichprobe – direkt vor Ihren Augen.',
+  },
+  {
+    icon: 'angebot',
+    title: 'Ihr Angebot',
+    text: 'Wir geben Ihnen ein Angebot für den Ankauf, basierend auf dem aktuellen Goldpreis und dem Gewicht des Goldes. Sie entscheiden, ob Sie es annehmen möchten.',
+  },
+  {
+    icon: 'auszahlung',
+    title: 'Sofortige Auszahlung',
+    text: 'Nehmen Sie das Angebot an, erhalten Sie den vereinbarten Preis unverzüglich in bar oder in einer anderen vereinbarten Form, z. B. per Überweisung.',
+  },
+];
+
+const columns = [
+  {
+    image: '/assets/img/altgold-schmuck-goldankauf-bingen.webp',
+    alt: 'Kiste mit Altgold-Schmuck: Ketten, Ringe, Armbänder und Münzen, Goldankauf beim Juwelier Fein in Bingen',
+    title: 'Was wir ankaufen',
+    paragraphs: [
+      '<strong>Schmuck:</strong> Goldringe, Ohrringe, Halsketten, Armbänder und andere Schmuckstücke aus Gold.',
+      '<strong>Münzen und Barren:</strong> Goldmünzen, die als Sammlerstücke oder Anlagemünzen gekauft wurden, sowie Goldbarren in verschiedenen Größen und Gewichten.',
+      '<strong>Dentalgold:</strong> Goldfüllungen, Kronen und Brücken aus Gold.',
+      '<strong>Weitere Gegenstände:</strong> Goldgehäuse von Elektronikgeräten, Goldbesteck, Goldmedaillen und andere Gegenstände aus Gold, Silber, Platin oder Palladium.',
+    ],
+  },
+  {
+    image: '/assets/img/goldankauf-beratung-waage-bingen.webp',
+    alt: 'Goldankauf-Beratung am Tresen: Altgold-Schmuck auf einem Prüftuch, daneben Waage und Taschenrechner, Juwelier Fein in Bingen',
+    title: 'Fragen? Sprechen Sie uns an',
+    paragraphs: [
+      'Haben Sie noch Fragen? Zögern Sie nicht, uns anzurufen unter <a href="tel:+4967213087840">06721 3087840</a> oder uns eine Mail zu schreiben. Gerne können Sie auch <a href="/kontakt">online Kontakt aufnehmen</a>.',
+      'Wir freuen uns auf Ihren Besuch – Ihr Team des <a href="/">Juwelier Fein in Bingen</a>.',
+    ],
+  },
+];
+
+const seoColumns = [
+  {
+    blocks: [
+      {
+        title: 'Goldankauf in Bingen',
+        paragraphs: [
+          'Sie besitzen alten Schmuck, den Sie geerbt haben oder einfach nicht mehr tragen? Haben Sie seit Ihrem letzten Zahnarztbesuch Dentalgold und wissen nicht, was Sie damit anfangen können? Bei Juwelier Fein in der Basilikastraße 30 sind wir Ihr persönlicher Ansprechpartner und helfen Ihnen gerne weiter.',
+          'In der Regel wird das angekaufte Gold eingeschmolzen und weiterverkauft. Grundlage für unser Angebot sind immer der aktuelle Goldpreis, das Gewicht und der Feingehalt Ihres Goldes.',
+        ],
+      },
+    ],
+  },
+  {
+    blocks: [
+      {
+        title: 'Röntgenfluoreszenzanalyse in speziellen Fällen',
+        paragraphs: [
+          'Die Strichprobe ist für die Feingehalte 333 ‰, 585 ‰, 750 ‰ und 900 ‰ genau. In speziellen Fällen nehmen wir eine umfangreiche Röntgenfluoreszenzanalyse (RFA) des Altgoldes vor.',
+        ],
+      },
+      {
+        title: 'Goldankauf für Bingen und die Region',
+        paragraphs: [
+          'Unser Geschäft liegt in der Basilikastraße, ganz in der Nähe der Burg Klopp. Rund um das Geschäft sind viele Parkplätze verfügbar. Kunden aus Ingelheim, Rüdesheim, Bad Kreuznach, Mainz und Wiesbaden sind uns genauso willkommen wie aus Bingen.',
+        ],
+      },
+    ],
+  },
+];
 ---
 <Base
   title="Goldankauf Bingen - Juwelier Bingen"
-  description=""
+  description="Goldankauf in Bingen am Rhein: Altgold, Schmuck, Münzen, Barren und Dentalgold verkaufen. Prüfung per Strichprobe und sofortige Auszahlung bei Juwelier Fein."
 >
   <PageHero
     kicker="Goldankauf in Bingen &ndash; fair &amp; persönlich"
@@ -15,63 +97,34 @@ import RatingBadge from '../../components/RatingBadge.astro';
     buttonHref="/kontakt"
     image="/assets/img/goldankauf-altgold-ringe-bingen.webp"
     imageLabel="Goldringe, Ketten und Feingold auf einer Werkbank, Goldankauf beim Juwelier Fein in Bingen"
+    slides={['/assets/img/goldankauf-altgold-ringe-bingen.webp']}
   >
     <RatingBadge />
   </PageHero>
 
-  <section id="text">
-    <div class="wrapper blank">
-      <img class="text-float" src="/assets/img/altgold-schmuck-goldankauf-bingen.webp" alt="Kiste mit Altgold-Schmuck: Ketten, Ringe, Armbänder und Münzen, Goldankauf beim Juwelier Fein in Bingen" width="320" height="213" loading="lazy" />
+  <ServiceColumns tinted />
 
-      <p>Der Goldankauf läuft in der Regel wie folgt ab:</p>
+  <FeatureCards
+    titleBefore="So läuft der"
+    titleHighlight="Goldankauf"
+    titleAfter="ab"
+    intro="In vier einfachen Schritten zum Verkauf Ihres Goldes – persönlich, transparent und direkt bei uns im Geschäft in Bingen."
+    items={steps}
+  />
 
-      <p>Sie bringen Ihr Gold, wie z. B. Schmuck, Münzen oder Barren, zu uns.</p>
+  <SplitFeature
+    kicker="Geprüft &amp; transparent"
+    title="Feingehaltsbestimmung mittels Strichprobe"
+    text="Bei der Strichprobe wird der Abrieb des Schmuckstücks auf einen Prüfstein aufgetragen und mittels Säuren auf den Feingehalt getestet. Verändert sich der Abrieb unter der Säure nicht oder nur gering, ist das Ergebnis positiv. Löst er sich auf, weist das auf einen niedrigeren Feingehalt oder ein unedles Metall hin."
+    image="/assets/img/goldankauf-juwelier-bingen.webp"
+    alt="Schmuck wird beim Juwelier Fein in Bingen mit der Lupe geprüft"
+    linkLabel="Jetzt Kontakt aufnehmen"
+    linkHref="/kontakt"
+  />
 
-      <p>Wir wiegen das Gold und bestimmen den Goldgehalt mittels Strichprobe (*weitere Informationen hierzu weiter unten).</p>
+  <TextColumns items={columns} />
 
-      <p>Wir geben Ihnen ein Angebot für den Ankauf des Goldes, basierend auf dem aktuellen Goldpreis und dem Gewicht des Goldes.</p>
+  <SeoTextColumns columns={seoColumns} />
 
-      <p>Sie entscheiden, ob Sie das Angebot annehmen möchten.</p>
-
-      <p>Wenn Sie das Angebot annehmen, erhalten Sie den vereinbarten Preis unverzüglich in bar oder in einer anderen vereinbarten Form, z. B. einer Überweisung.</p>
-
-      <p>In der Regel wird das gekaufte Gold eingeschmolzen und weiterverkauft.</p>
-
-      <p>Bei einem Goldankauf kann man folgende Gegenstände abgeben:</p>
-
-      <ul>
-        <li>Schmuck: Goldringe, Ohrringe, Halsketten, Armbänder und andere Schmuckstücke aus Gold,</li>
-        <li>Münzen: Goldmünzen, die als Sammlerstücke oder Anlagemünzen gekauft wurden,</li>
-        <li>Barren: Goldbarren in verschiedenen Größen und Gewichten,</li>
-        <li>Dentalgold: Goldfüllungen, Kronen und Brücken aus Gold,</li>
-        <li>Elektronik: Goldgehäuse von Elektronikgeräten wie Smartphones, Tablets und Laptops,</li>
-        <li>Andere Gegenstände: Goldbesteck, Goldmedaillen, Zahngold und andere Gegenstände/Schmuckstücke, die aus Gold, Silber, Platin oder Palladium bestehen.</li>
-      </ul>
-
-      <h3>Die Feingehaltsbestimmung mittels Strichprobe:</h3>
-
-      <p>Die Feingehaltsbestimmung mittels Strichprobe beinhaltet das Entnehmen einer Probe von einem Schmuckstück und die Überprüfung des Feingehalts durch den Einsatz von Säuren. Der Abrieb des Schmuckstücks wird auf einen Prüfstein aufgetragen und dann mittels Säuren auf den Feingehalt getestet. Wenn sich der Abrieb unter der Säure nicht oder nur gering verändert, bedeutet dies ein positives Ergebnis. Wenn der Abrieb sich auflöst, weist dies auf einen niedrigeren Feingehalt oder darauf hin, dass das Stück aus einem unedlen Metall besteht. Diese Methode ist allerdings nur für die Feingehalte 333 ‰ / 585 ‰ / 750 ‰ und 900 ‰ genau. In speziellen Fällen wird eine umfangreiche Röntgenfluoreszenzanalyse (RFA) des Altgoldes vorgenommen.</p>
-
-      <p>Haben Sie noch Fragen? Zögern Sie nicht, uns anzurufen oder eine Mail zu schreiben – wir freuen uns auf Ihren Besuch!</p>
-    </div>
-  </section>
+  <Reviews />
 </Base>
-
-<style>
-  .text-float {
-    float: right;
-    width: 320px;
-    max-width: 45%;
-    height: auto;
-    margin: 6px 0 24px 32px;
-  }
-  @media (max-width: 600px) {
-    .text-float {
-      float: none;
-      display: block;
-      width: 100%;
-      max-width: 100%;
-      margin: 0 0 24px;
-    }
-  }
-</style>

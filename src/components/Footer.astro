@@ -34,5 +34,49 @@
        <div class="footer_link">10:00 Uhr – 14:00 Uhr</div>
     </div>
 
+    <div class="footer_links footer_awards">
+      <h4>Auszeichnungen</h4>
+      <div class="award_list">
+        <a href="/assets/img/zertifikate/goldexperte-2027-juwelier-fein-bingen.webp" target="_blank" rel="noopener">
+          <img src="/assets/img/zertifikate/goldexperte-2027-juwelier-fein-bingen-klein.webp" alt="Auszeichnung Goldexperte 2027 von Blickpunkt Juwelier für Juwelier Fein in Bingen" width="120" height="167" loading="lazy">
+          <span>Goldexperte 2027</span>
+        </a>
+        <a href="/assets/img/zertifikate/trauringexperte-2027-juwelier-fein-bingen.webp" target="_blank" rel="noopener">
+          <img src="/assets/img/zertifikate/trauringexperte-2027-juwelier-fein-bingen-klein.webp" alt="Zertifikat Trauringexperte 2027 von Blickpunkt Juwelier für Juwelier Fein in Bingen" width="120" height="167" loading="lazy">
+          <span>Trauringexperte 2027</span>
+        </a>
+      </div>
+    </div>
+
   </div>
+
 </footer>
+
+<style>
+  .award_list {
+    display: flex;
+    gap: 16px;
+  }
+  .award_list a {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+    line-height: 1.3;
+    max-width: 90px;
+  }
+  .award_list img {
+    width: 90px;
+    height: auto;
+    display: block;
+    transition: transform 0.2s ease;
+  }
+  .award_list a:hover img {
+    transform: translateY(-3px);
+  }
+  @media only screen and (min-width: 600px) {
+    footer .wrapper {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+</style>

@@ -3,14 +3,20 @@ interface Props {
   kicker?: string;
   title?: string;
   text?: string;
+  set?: 'trauringe' | 'verlobungsringe';
 }
 const {
   kicker = 'Unsere Auswahl',
   title = 'Trauringe in Gold, Weißgold & Roségold',
   text = 'Ein kleiner Einblick in unsere Kollektion. Die ganze Auswahl zeigen wir Ihnen gern bei einem Besuch in Bingen.',
+  set = 'trauringe',
 } = Astro.props;
-const count = 14;
-const rings = Array.from({ length: count }, (_, i) => `/assets/img/trauringe/trauringe-juwelier-bingen-${String(i + 1).padStart(2, '0')}.webp`);
+const sets = {
+  trauringe: { count: 14, alt: 'Trauringe aus der Kollektion von Juwelier Fein in Bingen' },
+  verlobungsringe: { count: 15, alt: 'Verlobungsring aus der Kollektion von Juwelier Fein in Bingen' },
+};
+const { count, alt } = sets[set];
+const rings = Array.from({ length: count }, (_, i) => `/assets/img/${set}/${set}-juwelier-bingen-${String(i + 1).padStart(2, '0')}.webp`);
 ---
 <section class="rings" aria-label="Ringe aus unserer Kollektion">
   <div class="rings-head">
@@ -24,7 +30,7 @@ const rings = Array.from({ length: count }, (_, i) => `/assets/img/trauringe/tra
       {[0, 1].map((copy) => (
         rings.map((src) => (
           <div class="ring" aria-hidden={copy === 1 ? 'true' : undefined}>
-            <img src={src} alt={copy === 1 ? '' : 'Trauringe aus der Kollektion von Juwelier Fein in Bingen'} width="800" height="667" loading="lazy" decoding="async" />
+            <img src={src} alt={copy === 1 ? '' : alt} width="800" height="667" loading="lazy" decoding="async" />
           </div>
         ))
       ))}

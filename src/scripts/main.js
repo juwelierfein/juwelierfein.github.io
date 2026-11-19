@@ -12,43 +12,57 @@ if (hero && !hero.dataset.video) {
   const images = [...new Set([initial, ...others].filter(Boolean))];
 
   if (images.length > 1) {
-    const fade = document.createElement('div');
-    fade.className = 'hero-fade';
-    hero.prepend(fade);
+    // Zwei Ebenen: das neue Bild blendet jeweils oben über das alte ein,
+    // erst danach wird die untere Ebene ausgeblendet. So gibt es kein Springen.
+    const FADE_MS = 1200;
+    const INTERVAL_MS = 4500;
+    const layers = [0, 1].map(() => {
+      const el = document.createElement('div');
+      el.className = 'hero-fade';
+      el.style.transition = `opacity ${FADE_MS}ms ease-in-out`;
+      hero.prepend(el);
+      return el;
+    });
 
     const cache = new Map();
     const load = (src) => {
       if (!cache.has(src)) {
-        cache.set(
-          src,
-          new Promise((resolve) => {
-            const img = new Image();
-            img.onload = img.onerror = resolve;
-            img.src = src;
-          })
-        );
+        const img = new Image();
+        img.src = src;
+        cache.set(src, (img.decode ? img.decode() : Promise.resolve()).catch(() => {}));
       }
       return cache.get(src);
     };
     images.forEach(load);
 
     let current = 0;
-    const FADE_MS = 1000;
+    let top = 0;
+    // Startbild auf die erste Ebene legen
+    layers[0].style.backgroundImage = `url("${images[0]}")`;
+    layers[0].style.opacity = '1';
+    layers[0].style.zIndex = '1';
+
     setInterval(async () => {
       const nextIndex = (current + 1) % images.length;
       const src = images[nextIndex];
       await load(src);
-      fade.style.backgroundImage = `url("${src}")`;
-      fade.style.opacity = '1';
+      const incoming = layers[1 - top];
+      const outgoing = layers[top];
+      incoming.style.transition = 'none';
+      incoming.style.opacity = '0';
+      incoming.style.backgroundImage = `url("${src}")`;
+      incoming.style.zIndex = '2';
+      outgoing.style.zIndex = '1';
+      void incoming.offsetWidth;
+      incoming.style.transition = `opacity ${FADE_MS}ms ease-in-out`;
+      incoming.style.opacity = '1';
       setTimeout(() => {
-        hero.style.backgroundImage = `url("${src}")`;
-        fade.style.transition = 'none';
-        fade.style.opacity = '0';
-        void fade.offsetWidth;
-        fade.style.transition = '';
-        current = nextIndex;
-      }, FADE_MS);
-    }, 5000);
+        outgoing.style.transition = 'none';
+        outgoing.style.opacity = '0';
+      }, FADE_MS + 50);
+      top = 1 - top;
+      current = nextIndex;
+    }, INTERVAL_MS);
   }
 }
 
