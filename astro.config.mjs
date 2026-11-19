@@ -7,6 +7,8 @@ export default defineConfig({
   build: { format: 'file' },
   redirects: {
     '/produkte/silberschmuck': '/',
+    '/wichtig': '/impressum',
+    '/wichtig2': '/datenschutz',
   },
   integrations: [
     sitemap({
