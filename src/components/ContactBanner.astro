@@ -4,10 +4,11 @@ const {
   text = 'Buchen Sie jetzt einen Termin bei uns.',
   buttonLabel = 'Kontaktieren',
   buttonHref = '/kontakt',
-  image = '/assets/img/diamant-ring-banner-juwelier-bingen.webp',
+  image = '/assets/img/juwelier-fein-geschaeft-bingen.webp',
+  position = 'center 62%',
 } = Astro.props;
 ---
-<section class="contact-banner" style={`background-image: url(${image})`}>
+<section class="contact-banner" style={`background-image: url(${image}); background-position: ${position}`} role="img" aria-label="Verkaufsraum von Juwelier Fein in der Basilikastraße 30 in Bingen">
   <div class="content">
     <p>{text}</p>
     <a href={buttonHref}>

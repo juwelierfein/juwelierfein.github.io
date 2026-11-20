@@ -1,11 +1,18 @@
 ---
 import Base from './Base.astro';
 const { frontmatter } = Astro.props;
-const { title, description } = frontmatter;
+const { title, description, image, imageLabel = '' } = frontmatter;
 ---
 <Base title={title} description={description}>
   <section id="hero_outer">
-    <section id="hero" class="blank">
+    <section
+      id="hero"
+      class="blank"
+      style={image ? `background-image: url(${image})` : undefined}
+      data-slides={image ? image : undefined}
+      role={image ? 'img' : undefined}
+      aria-label={image ? imageLabel : undefined}
+    >
       <div class="content"></div>
     </section>
 

@@ -1,6 +1,8 @@
 ---
 layout: ../layouts/Page.astro
 title: "Kontakt"
+image: "/assets/img/juwelier-fein-geschaeft-bingen.webp"
+imageLabel: "Verkaufsraum von Juwelier Fein in der Basilikastraße 30 in Bingen"
 description: "Schreiben Sie uns! Einfach an kontakt@info-juwelier-fein.de oder nutzen Sie das untenstehende Kontaktformular. Natürlich erreichen Sie uns ebenfalls telefonisch unter 06721 3087840."
 ---
 
