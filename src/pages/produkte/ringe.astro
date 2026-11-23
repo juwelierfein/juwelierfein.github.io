@@ -4,10 +4,95 @@ import PageHero from '../../components/PageHero.astro';
 import RatingBadge from '../../components/RatingBadge.astro';
 import RingSlider from '../../components/RingSlider.astro';
 import SplitFeature from '../../components/SplitFeature.astro';
+import ServiceColumns from '../../components/ServiceColumns.astro';
+import FeatureCards from '../../components/FeatureCards.astro';
+import TextColumns from '../../components/TextColumns.astro';
+import SeoTextColumns from '../../components/SeoTextColumns.astro';
+import Reviews from '../../components/Reviews.astro';
+
+const steps = [
+  {
+    icon: 'fassung',
+    title: 'Design und Profil',
+    text: 'Schlicht und klassisch, mit Struktur oder mit Steinbesatz – wir zeigen Ihnen verschiedene Modelle, damit Sie herausfinden, was zu Ihnen beiden passt.',
+  },
+  {
+    icon: 'metall',
+    title: 'Legierung',
+    text: 'Gelbgold, Weißgold, Roségold, Platin oder eine Kombination. Wir erklären Ihnen die Unterschiede in Farbe, Härte und Pflege.',
+  },
+  {
+    icon: 'diamant',
+    title: 'Steine und Gravur',
+    text: 'Ob ein einzelner Diamant, ein Steinbesatz oder eine persönliche Gravur mit Datum und Namen – wir gehen gerne auf Ihre Sonderwünsche ein.',
+  },
+  {
+    icon: 'groesse',
+    title: 'Ringgröße',
+    text: 'Wir messen Ihre Ringgrößen bei uns im Geschäft genau aus, damit Ihre Trauringe ein Leben lang bequem sitzen.',
+  },
+];
+
+const columns = [
+  {
+    image: '/assets/img/trauring-anstecken-hochzeit-bingen.webp',
+    alt: 'Trauring wird bei der Hochzeit angesteckt, Trauringe vom Juwelier Fein in Bingen',
+    title: 'Trauringe selbst gestalten',
+    paragraphs: [
+      'Sie möchten schon vorab ausprobieren, wie Ihre Ringe aussehen könnten? Im <a href="/trauringkonfigurator">Trauringkonfigurator</a> stellen Sie Profil, Legierung und Steine nach Ihren Vorstellungen zusammen. Bei Ihrem Termin besprechen wir Ihren Entwurf gemeinsam.',
+      'Sie suchen noch einen passenden Ring für den Antrag? Dann schauen Sie bei unseren <a href="/verlobungsring">Verlobungsringen</a> vorbei.',
+    ],
+  },
+  {
+    image: '/assets/img/trauringe-etui-blumen-bingen.webp',
+    alt: 'Zwei goldene Trauringe auf einem Etui mit Blumen, Trauringe vom Juwelier Fein in Bingen',
+    title: 'Beratungstermin vereinbaren',
+    paragraphs: [
+      'Kommen Sie in unserem Geschäft in der Basilikastraße 30 in Bingen am Rhein vorbei oder <a href="/kontakt">vereinbaren Sie online einen Termin</a>. Wir nehmen uns so viel Zeit, wie Sie benötigen.',
+      'Für einen guten Start in das gemeinsame Glück – Ihr Team des <a href="/">Juwelier Fein in Bingen</a>.',
+    ],
+  },
+];
+
+const seoColumns = [
+  {
+    blocks: [
+      {
+        title: 'Trauringe kaufen in Bingen',
+        paragraphs: [
+          'Es gibt nichts Wertbeständigeres auf der Welt als die Liebe. Wenn sich ein Paar dazu entscheidet, diese Liebe durch das Ja-Wort zu besiegeln, gehört das Symbol der Liebe dazu. Bei Juwelier Fein in der Basilikastraße 30 finden Sie Trauringe von klassisch bis modern.',
+          'Seit fast 140 Jahren steht unser Haus für persönliche Beratung und gutes Handwerk. Wir nehmen uns Zeit für Sie beide und beraten Sie ehrlich und ohne Kaufdruck.',
+        ],
+      },
+      {
+        title: 'Unsere Trauringpartner',
+        paragraphs: [
+          'Unsere führenden Trauringpartner sind die Qualitätsfirmen Gerstner, Saint Maurice und Rubin. Gerne zeigen wir Ihnen bei Ihrem Besuch die Kollektionen und beraten Sie, welches Modell zu Ihnen passt.',
+        ],
+      },
+    ],
+  },
+  {
+    blocks: [
+      {
+        title: 'Gravur, Ringgröße und Anpassung',
+        paragraphs: [
+          'Eine Gravur macht Ihre Trauringe einzigartig, zum Beispiel mit Ihrem Hochzeitsdatum oder Ihren Namen. Die Ringgröße messen wir bei uns genau aus. Verändert sich die Größe später einmal, kann ein Ring in der Regel angepasst werden. Auch Reparaturen erledigen wir für Sie.',
+        ],
+      },
+      {
+        title: 'Trauringe für Bingen und die Region',
+        paragraphs: [
+          'Unser Geschäft liegt in der Basilikastraße, ganz in der Nähe der Burg Klopp. Rund um das Geschäft sind viele Parkplätze verfügbar. Paare aus Ingelheim, Rüdesheim, Bad Kreuznach, Mainz und Wiesbaden sind uns genauso willkommen wie aus Bingen. <a href="/kontakt">Vereinbaren Sie jetzt Ihren Beratungstermin</a>, wir freuen uns auf Sie.',
+        ],
+      },
+    ],
+  },
+];
 ---
 <Base
   title="Trauringe in Bingen kaufen - Juwelier Bingen"
-  description="Trauringe in Bingen am Rhein kaufen."
+  description="Trauringe in Bingen am Rhein: persönliche Beratung zu Design, Legierung, Steinen und Gravur. Trauringe von Gerstner, Saint Maurice und Rubin bei Juwelier Fein."
 >
   <PageHero
     kicker="Trauringe in Bingen &ndash; persönlich &amp; individuell"
@@ -25,6 +110,16 @@ import SplitFeature from '../../components/SplitFeature.astro';
 
   <RingSlider />
 
+  <ServiceColumns tinted />
+
+  <FeatureCards
+    titleBefore="Was bei der Wahl der"
+    titleHighlight="Trauringe"
+    titleAfter="wichtig ist"
+    intro="Vier Punkte, an denen Sie sich orientieren können. Zu jedem einzelnen beraten wir Sie gerne persönlich in unserem Geschäft in Bingen."
+    items={steps}
+  />
+
   <SplitFeature
     kicker="Gerstner, Saint Maurice &amp; Rubin"
     title="Ihr individueller Trau(m)ring"
@@ -34,4 +129,10 @@ import SplitFeature from '../../components/SplitFeature.astro';
     linkLabel="Beratungstermin vereinbaren"
     linkHref="/kontakt"
   />
+
+  <TextColumns items={columns} />
+
+  <SeoTextColumns columns={seoColumns} />
+
+  <Reviews />
 </Base>
