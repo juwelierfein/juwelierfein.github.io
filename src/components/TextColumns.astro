@@ -1,12 +1,15 @@
 ---
 // Zwei Textspalten mit Foto (Standard: 220x280, eckig) links; der Text umfließt das Foto und beginnt darunter wieder links. imageSize="mini" = 120x120 neben dem Text.
-// items: [{ image, alt, title, paragraphs: string[] (HTML erlaubt) }]
+// items: [{ image, alt, title, paragraphs: string[] (HTML erlaubt), note?: kleiner Hinweis unten rechts im Foto, z. B. 'KI-generiertes Bild' }]
 const { items, imageSize = 'large' } = Astro.props;
 ---
 <section class:list={['cols', imageSize]}>
   {items.map((item) => (
     <div class="col">
-      <img class="col-img" src={item.image} alt={item.alt} width={imageSize === 'large' ? 220 : 120} height={imageSize === 'large' ? 280 : 120} loading="lazy" />
+      <div class="col-img">
+        <img src={item.image} alt={item.alt} width={imageSize === 'large' ? 220 : 120} height={imageSize === 'large' ? 280 : 120} loading="lazy" />
+        {item.note && <span class="img-note">{item.note}</span>}
+      </div>
       <div class="col-body">
         <h2 class="col-title">{item.title}</h2>
         {item.paragraphs.map((html) => <p set:html={html} />)}
@@ -33,8 +36,26 @@ const { items, imageSize = 'large' } = Astro.props;
     flex: 0 0 120px;
     width: 120px;
     height: 120px;
-    object-fit: cover;
     margin-top: 6px;
+    position: relative;
+  }
+  .col-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .img-note {
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    padding: 2px 6px;
+    font-size: 11px;
+    line-height: 1.4;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 2px;
+    pointer-events: none;
   }
   .col-body {
     flex: 1;
